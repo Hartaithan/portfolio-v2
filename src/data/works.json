@@ -4,27 +4,71 @@
 		"categ": "Mobile Game",
 		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
 		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
+		"links": [
+			{
+				"svg": "playmarket",
+				"src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
+			},
+			{
+				"svg": "link",
+				"src": "https://hartaithan.github.io/a-z/"
+			}
+		]
 	},
 	{
-		"name": "A-Z2",
-		"categ": "Mobile Game",
-		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
-		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+		"name": "Test",
+		"categ": "Test Category",
+		"descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
+		"img": "./logo512.png",
+		"tags": ["TEST1", "TEST2", "TEST3", "TEST4", "TEST5"],
+		"links": [
+			{
+				"svg": "playmarket",
+				"src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
+			},
+			{
+				"svg": "link",
+				"src": "https://hartaithan.github.io/a-z/"
+			},
+			{
+				"svg": "github",
+				"src": "https://hartaithan.github.io/a-z/"
+			}
+		]
 	},
 	{
 		"name": "A-Z3",
 		"categ": "Mobile Game",
 		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
 		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
+		"links": [
+			{
+				"svg": "playmarket",
+				"src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
+			},
+			{
+				"svg": "link",
+				"src": "https://hartaithan.github.io/a-z/"
+			}
+		]
 	},
 	{
 		"name": "A-Z4",
 		"categ": "Mobile Game",
 		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
 		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
+		"links": [
+			{
+				"svg": "playmarket",
+				"src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
+			},
+			{
+				"svg": "link",
+				"src": "https://hartaithan.github.io/a-z/"
+			}
+		]
 	}
 ]

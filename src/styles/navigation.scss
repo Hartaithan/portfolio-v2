@@ -17,6 +17,7 @@
 		left: 50%;
 		height: 2px;
 		width: 0%;
+		opacity: 0;
 		background: white;
 		-webkit-transition: all 0.3s ease;
 		-moz-transition: all 0.3s ease;
@@ -28,6 +29,7 @@
 		&:before {
 			width: 100%;
 			left: 0;
+			opacity: 1;
 		}
 	}
 	&_active {
@@ -40,6 +42,7 @@
 		left: 0;
 		height: 2px;
 		width: 100%;
+		opacity: 1;
 		background: white;
 	}
 	#home {

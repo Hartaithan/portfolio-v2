@@ -72,12 +72,15 @@
 			}
 			&_links {
 				height: 20px;
+				a {
+					height: 100%;
+				}
 				svg {
 					height: 100%;
 					fill: white;
 					cursor: pointer;
 				}
-				svg:not(:last-of-type) {
+				a:not(:last-of-type) {
 					margin-right: 10px;
 				}
 			}
