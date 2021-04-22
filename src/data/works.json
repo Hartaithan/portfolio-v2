@@ -1,0 +1,30 @@
+[
+	{
+		"name": "A-Z",
+		"categ": "Mobile Game",
+		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
+		"img": "./img/works/a-z.png",
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+	},
+	{
+		"name": "A-Z2",
+		"categ": "Mobile Game",
+		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
+		"img": "./img/works/a-z.png",
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+	},
+	{
+		"name": "A-Z3",
+		"categ": "Mobile Game",
+		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
+		"img": "./img/works/a-z.png",
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+	},
+	{
+		"name": "A-Z4",
+		"categ": "Mobile Game",
+		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
+		"img": "./img/works/a-z.png",
+		"tags": ["ANDROID", "KOTLIN", "VOLLEY"]
+	}
+]

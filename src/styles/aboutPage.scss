@@ -1,0 +1,85 @@
+@import "variables";
+@import "colors";
+
+.about {
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	display: grid;
+	align-content: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px fit-content;
+	gap: 30px 30px;
+	grid-template-areas:
+		"ABOUT ABOUT ABOUT"
+		"EL1 EL2 EL3";
+	&_element {
+		display: flex;
+		flex-direction: column;
+		flex: 10;
+		background: rgba($color-grey, 0.8);
+		padding: $about_el_pad;
+		border-radius: $about_el_bord_rad;
+		&_title {
+			min-height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3vh;
+			span {
+				height: fit-content;
+			}
+		}
+		&_content {
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 10px 0;
+			ul {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				list-style-type: none;
+				li {
+					margin: 5px 3px;
+					width: fit-content;
+					background: transparent;
+					border-radius: 10px;
+					border: 2px solid white;
+					padding: 5px 10px;
+					font-weight: 500;
+					-webkit-transition: all 0.3s ease;
+					-moz-transition: all 0.3s ease;
+					-ms-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+				}
+				li:hover {
+					background: white;
+					color: black;
+				}
+			}
+		}
+	}
+	#aboutme {
+		grid-area: ABOUT;
+		.about_element_title {
+			justify-content: flex-start;
+		}
+		.about_element_content {
+			font-size: 1.8vh;
+			justify-content: flex-start;
+		}
+	}
+	#frontend {
+		grid-area: EL1;
+	}
+	#backend {
+		grid-area: EL2;
+	}
+	#other {
+		grid-area: EL3;
+	}
+}

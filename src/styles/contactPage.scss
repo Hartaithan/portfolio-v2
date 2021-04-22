@@ -1,0 +1,60 @@
+@import "variables";
+@import "colors";
+
+.contact {
+	width: 40%;
+	height: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	align-content: center;
+	justify-items: center;
+	&_icon {
+		height: 150px;
+		width: 150px;
+		background: $color-grey;
+		border-radius: 50%;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		svg {
+			fill: white;
+			transform: scale(0.55);
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+	}
+	&_icon:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		height: 146px;
+		width: 146px;
+		opacity: 0.8;
+		border: 2px solid white;
+		border-radius: 50%;
+		transform: scale(0.99);
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	&_icon:hover {
+		background: white;
+		&:before {
+			opacity: 0;
+			border: 2px solid white;
+			transform: scale(1.2);
+		}
+		svg {
+			fill: black;
+			transform: scale(0.6);
+		}
+	}
+}

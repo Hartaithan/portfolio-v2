@@ -1,0 +1,42 @@
+@import "variables";
+@import "colors";
+
+.home {
+	width: 70%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	&_text {
+		font-size: 12vh;
+		font-weight: 600;
+	}
+	&_buttons {
+		display: flex;
+		&_button {
+			background: transparent;
+			border: 2px solid white;
+			padding: 15px;
+			font-size: 1.5vh;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-top: 20px;
+			cursor: pointer;
+			outline: none;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+		&_button:hover {
+			background: white;
+			color: black;
+		}
+		#works {
+			margin-right: 20px;
+		}
+	}
+}
