@@ -1,7 +1,8 @@
 [
 	{
+		"id": 1,
 		"name": "A-Z",
-		"categ": "Mobile Game",
+		"categ": "Mobile Game | Android",
 		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
 		"img": "./img/works/a-z.png",
 		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
@@ -17,10 +18,29 @@
 		]
 	},
 	{
+		"id": 2,
+		"name": "Camo Tracker",
+		"categ": "Web App | React",
+		"descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with React, Redux, Router Dom. Design is adapted for desktop and mobile devices. Progress is saved by storing state in localStorage. In the future I plan to add authentication and progress storage on the server (Node.JS, MongoDB).",
+		"img": "./img/works/camo-tracker.png",
+		"tags": ["REACT", "ROUTER DOM", "REDUX", "NODE SASS", "LOCALSTORAGE"],
+		"links": [
+			{
+				"svg": "github",
+				"src": "https://github.com/Hartaithan/camo-tracker/"
+			},
+			{
+				"svg": "link",
+				"src": "https://hartaithan.github.io/camo-tracker/"
+			}
+		]
+	},
+	{
+		"id": 3,
 		"name": "Test",
 		"categ": "Test Category",
 		"descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
-		"img": "./logo512.png",
+		"img": "https://media1.tenor.com/images/5dd27507782940e1a2eb4a2cfdf5fad5/tenor.gif?itemid=18638749",
 		"tags": ["TEST1", "TEST2", "TEST3", "TEST4", "TEST5"],
 		"links": [
 			{
@@ -38,11 +58,12 @@
 		]
 	},
 	{
-		"name": "A-Z3",
-		"categ": "Mobile Game",
-		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
-		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
+		"id": 4,
+		"name": "Test",
+		"categ": "Test Category",
+		"descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
+		"img": "https://steamuserimages-a.akamaihd.net/ugc/945084423170511786/907EBE3A7DD84ED1957DD2551F14EFEE357CC4E4/",
+		"tags": ["TEST1", "TEST2", "TEST3", "TEST4", "TEST5"],
 		"links": [
 			{
 				"svg": "playmarket",
@@ -51,22 +72,9 @@
 			{
 				"svg": "link",
 				"src": "https://hartaithan.github.io/a-z/"
-			}
-		]
-	},
-	{
-		"name": "A-Z4",
-		"categ": "Mobile Game",
-		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
-		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
-		"links": [
-			{
-				"svg": "playmarket",
-				"src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
 			},
 			{
-				"svg": "link",
+				"svg": "github",
 				"src": "https://hartaithan.github.io/a-z/"
 			}
 		]

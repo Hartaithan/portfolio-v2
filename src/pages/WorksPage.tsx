@@ -10,12 +10,38 @@ const WorksPage: React.FC = () => {
 		document.title = "Works | Hartaithan.";
 	});
 
+	const [page, setPage] = React.useState(0);
+	const [pos, setPos] = React.useState(true);
+
+	function minusPage() {
+		const numOfPages = items.length - 1;
+		if (page > 0) {
+			setPage(page - 1);
+			setPos(!pos);
+		} else {
+			setPage(numOfPages);
+			setPos(!pos);
+		}
+	}
+
+	function plusPage() {
+		const numOfPages = items.length - 1;
+		if (page < numOfPages) {
+			setPage(page + 1);
+			setPos(!pos);
+		} else {
+			setPage(0);
+			setPos(!pos);
+		}
+	}
+
 	interface ILinks {
 		svg: string;
 		src: string;
 	}
 
 	interface IItems {
+		id: number;
 		name: string;
 		categ: string;
 		descr: string;
@@ -25,42 +51,41 @@ const WorksPage: React.FC = () => {
 	}
 
 	interface IWorkProps {
-		pos: string;
 		items: IItems;
 	}
 
-	const Work: React.FC<IWorkProps> = ({ pos, items }): JSX.Element => {
+	const Work: React.FC<IWorkProps> = ({ items }): JSX.Element => {
 		return (
 			<div className="works_main">
-				<div className="works_main_container" style={{ alignSelf: pos === "left" ? "flex-start" : "flex-end" }}>
-					<div className="works_main_container_title" style={{ justifyContent: pos === "left" ? "flex-start" : "flex-end" }}>
-						1. {items.name}
+				<div className="works_main_container" style={{ alignSelf: pos === false ? "flex-start" : "flex-end" }}>
+					<div className="works_main_container_title" style={{ justifyContent: pos === false ? "flex-start" : "flex-end" }}>
+						{items.id}. {items.name}
 					</div>
-					<div className="works_main_container_category" style={{ justifyContent: pos === "left" ? "flex-start" : "flex-end" }}>
+					<div className="works_main_container_category" style={{ justifyContent: pos === false ? "flex-start" : "flex-end" }}>
 						{items.categ}
 					</div>
-					<div className="works_main_container_descr" style={{ textAlign: pos === "left" ? "start" : "end" }}>
+					<div className="works_main_container_descr" style={{ textAlign: pos === false ? "start" : "end" }}>
 						{items.descr}
 					</div>
 					<div className="works_main_container_tags">
-						<ul style={{ justifyContent: pos === "left" ? "flex-start" : "flex-end" }}>
+						<ul style={{ justifyContent: pos === false ? "flex-start" : "flex-end" }}>
 							{items.tags.map((tag) => {
 								return <li key={tag}>{tag}</li>;
 							})}
 						</ul>
 					</div>
-					<div className="works_main_container_links" style={{ justifyContent: pos === "left" ? "flex-start" : "flex-end" }}>
+					<div className="works_main_container_links" style={{ justifyContent: pos === false ? "flex-start" : "flex-end" }}>
 						{items.links.map((link) => {
 							return (
-								<a href={link.src} target="_blank" rel="noreferrer">
+								<a href={link.src} key={link.svg} target="_blank" rel="noreferrer">
 									<DynamicIcon svg={link.svg} />
 								</a>
 							);
 						})}
 					</div>
 				</div>
-				<div className="works_main_img" style={{ alignSelf: pos === "left" ? "flex-end" : "flex-start" }}>
-					<img src="./img/works/a-z.png" alt="works_main_img"></img>
+				<div className="works_main_img" style={{ alignSelf: pos === false ? "flex-end" : "flex-start" }}>
+					<img src={items.img} alt="works_main_img"></img>
 				</div>
 			</div>
 		);
@@ -68,12 +93,12 @@ const WorksPage: React.FC = () => {
 
 	return (
 		<motion.div className="works" variants={containerAnimation} initial="hidden" animate="visible" exit="exit">
-			<Work pos="right" items={items[0]} />
+			<Work items={items[page]} />
 			<div className="works_arrows">
-				<svg className="works_arrows_left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<svg className="works_arrows_left" onClick={() => minusPage()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 					<path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
 				</svg>
-				<svg className="works_arrows_right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<svg className="works_arrows_right" onClick={() => plusPage()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 					<path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
 				</svg>
 			</div>
