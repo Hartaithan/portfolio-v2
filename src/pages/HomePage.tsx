@@ -24,9 +24,11 @@ const HomePage: React.FC = () => {
 						My Works
 					</button>
 				</Link>
-				<button className="home_buttons_button" id="resume">
-					Get Resume
-				</button>
+				<a href="./data/resume.pdf" target="_blank" rel="noreferrer">
+					<button className="home_buttons_button" id="resume">
+						Get Resume
+					</button>
+				</a>
 			</div>
 		</motion.div>
 	);

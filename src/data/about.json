@@ -2,7 +2,7 @@
 	{
 		"id": "aboutme",
 		"title": "About Me",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat id eveniet quae cupiditate odio autem consequuntur cumque repellendus eos, soluta saepe assumenda quam dolorem sint voluptate, quidem omnis nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat id eveniet quae cupiditate odio autem consequuntur cumque repellendus eos, soluta saepe assumenda quam dolorem sint voluptate, quidem omnis nostrum. ",
+		"content": "I am a novice front-end developer. At the moment I'm developing as a hobby, but I'm on my way to turn my hobby into a full-fledged profession.",
 		"containsTags": false,
 		"tags": []
 	},
@@ -11,7 +11,7 @@
 		"title": "Front-End Skills",
 		"content": "Front-End Skills",
 		"containsTags": true,
-		"tags": ["HTML", "CSS", "SASS", "RESP. DESIGN", "JS ES6+", "REACT", "REDUX"]
+		"tags": ["HTML", "CSS", "SASS", "RESP. DESIGN", "JS ES6+", "TS 4+", "REACT", "REDUX"]
 	},
 	{
 		"id": "backend",
