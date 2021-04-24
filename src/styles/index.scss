@@ -5,14 +5,36 @@
 	padding: 0;
 	margin: 0;
 	color: $color-text;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	box-sizing: border-box;
 }
 
 body {
 	background: black;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 }
 
 #app {
-	height: 100vh;
+	height: 100%;
+}
+
+// MOBILE
+@media (min-width: 300px) and (max-width: 767.99px) {
+}
+
+// TABLET PORTRAIT
+@media (min-width: 768px) and (max-width: 991.99px) {
+}
+
+// TABLET LANDSCAPE
+@media (min-width: 992px) and (max-width: 1199.99px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1200px) and (max-width: 1399.99px) {
+}
+
+// DESKTOP
+@media (min-width: 1400px) {
 }

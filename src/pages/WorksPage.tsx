@@ -13,6 +13,16 @@ const WorksPage: React.FC = () => {
 	const [page, setPage] = React.useState(0);
 	const [pos, setPos] = React.useState(true);
 
+	React.useEffect(() => {
+		const allPagesItems = Array.from(document.getElementsByClassName("works_pages_item"));
+		allPagesItems.forEach((element) => {
+			const el = element as HTMLElement;
+			el.style.background = "#1b1b1b";
+		});
+		const pageItem = document.querySelector(`#page${page}`) as HTMLElement;
+		pageItem.style.background = "white";
+	}, [page]);
+
 	function minusPage() {
 		const numOfPages = items.length - 1;
 		if (page > 0) {
@@ -101,6 +111,11 @@ const WorksPage: React.FC = () => {
 				<svg className="works_arrows_right" onClick={() => plusPage()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 					<path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
 				</svg>
+			</div>
+			<div className="works_pages">
+				{items.map((item, index) => {
+					return <div className="works_pages_item" id={`page${index}`} key={item.name} onClick={() => setPage(index)}></div>;
+				})}
 			</div>
 		</motion.div>
 	);

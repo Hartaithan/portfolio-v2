@@ -16,7 +16,6 @@
 	&_element {
 		display: flex;
 		flex-direction: column;
-		flex: 10;
 		background: rgba($color-grey, 0.8);
 		padding: $about_el_pad;
 		border-radius: $about_el_bord_rad;
@@ -82,4 +81,59 @@
 	#other {
 		grid-area: EL3;
 	}
+}
+
+// MOBILE
+@media (min-width: 300px) and (max-width: 767.99px) {
+	.about {
+		width: 80%;
+		grid-template-columns: 1fr;
+		grid-template-rows: fit-content fit-content fit-content fit-content;
+		gap: 1.5vh 0;
+		grid-template-areas:
+			"ABOUT"
+			"EL1"
+			"EL2"
+			"EL3";
+		&_element {
+			padding: $about_el_pad_mobile;
+			&_title {
+				min-height: 3vh;
+				font-size: 2.2vh;
+			}
+			&_content {
+				height: fit-content;
+				margin-bottom: 0px;
+				ul {
+					li {
+						font-size: 1.4vh;
+					}
+				}
+			}
+		}
+		#aboutme {
+			.about_element_title {
+				justify-content: center;
+			}
+			.about_element_content {
+				justify-content: center;
+			}
+		}
+	}
+}
+
+// TABLET PORTRAIT
+@media (min-width: 768px) and (max-width: 991.99px) {
+}
+
+// TABLET LANDSCAPE
+@media (min-width: 992px) and (max-width: 1199.99px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1200px) and (max-width: 1399.99px) {
+}
+
+// DESKTOP
+@media (min-width: 1400px) {
 }

@@ -58,3 +58,37 @@
 		}
 	}
 }
+
+// MOBILE
+@media (min-width: 300px) and (max-width: 767.99px) {
+	.contact {
+		width: 90%;
+		justify-content: center;
+		grid-template-columns: 45% 45%;
+		grid-template-rows: 20vh 20vh;
+		gap: 2vh 2vh;
+		&_icon {
+			height: 15vh;
+			width: 15vh;
+		}
+		&_icon:before {
+			opacity: 0;
+		}
+	}
+}
+
+// TABLET PORTRAIT
+@media (min-width: 768px) and (max-width: 991.99px) {
+}
+
+// TABLET LANDSCAPE
+@media (min-width: 992px) and (max-width: 1199.99px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1200px) and (max-width: 1399.99px) {
+}
+
+// DESKTOP
+@media (min-width: 1400px) {
+}
