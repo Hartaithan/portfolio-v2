@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/homePage.scss";
 import { motion } from "framer-motion";
-import containerAnimation from "../animations";
+import { containerAnimation } from "../animations";
 import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {

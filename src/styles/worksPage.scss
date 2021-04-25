@@ -1,6 +1,10 @@
 @import "variables";
 @import "colors";
 
+* {
+	overflow: hidden;
+}
+
 .works {
 	width: 60%;
 	height: 100%;
@@ -10,11 +14,12 @@
 	align-items: center;
 	&_main {
 		height: 100%;
+		max-width: 60%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		position: relative;
+		position: absolute;
 		&_container {
 			align-self: flex-end;
 			width: 60%;
@@ -94,6 +99,7 @@
 			height: 60%;
 			img {
 				height: 100%;
+				pointer-events: none;
 			}
 		}
 	}
@@ -172,10 +178,10 @@
 			padding: 0 5px;
 		}
 		&_pages {
-			bottom: 2.5vh;
+			bottom: 25px;
 			&_item {
-				height: 1.5vh;
-				width: 1.5vh;
+				height: 1vh;
+				width: 1vh;
 			}
 			&_item:not(:last-child) {
 				margin-right: 2vw;

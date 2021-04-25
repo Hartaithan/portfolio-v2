@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/aboutPage.scss";
 import { motion } from "framer-motion";
-import containerAnimation from "../animations";
+import { containerAnimation } from "../animations";
 import items from "../data/about.json";
 
 const AboutPage: React.FC = () => {

@@ -23,7 +23,6 @@ window.addEventListener("resize", () => {
 
 const App: React.FC = () => {
 	const location = useLocation();
-
 	return (
 		<>
 			<Navigation />

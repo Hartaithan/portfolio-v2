@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/contactPage.scss";
 import { motion } from "framer-motion";
-import containerAnimation from "../animations"
+import { containerAnimation } from "../animations";
 
 const ContactPage: React.FC = () => {
 	React.useEffect(() => {
