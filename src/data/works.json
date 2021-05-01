@@ -37,7 +37,7 @@
 	},
 	{
 		"id": 3,
-		"name": "Test",
+		"name": "Test1",
 		"categ": "Test Category",
 		"descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
 		"img": "https://media1.tenor.com/images/5dd27507782940e1a2eb4a2cfdf5fad5/tenor.gif?itemid=18638749",
@@ -59,7 +59,7 @@
 	},
 	{
 		"id": 4,
-		"name": "Test",
+		"name": "Test2",
 		"categ": "Test Category",
 		"descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
 		"img": "https://steamuserimages-a.akamaihd.net/ugc/945084423170511786/907EBE3A7DD84ED1957DD2551F14EFEE357CC4E4/",

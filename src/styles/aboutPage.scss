@@ -86,6 +86,7 @@
 // MOBILE
 @media (min-width: 300px) and (max-width: 767.99px) {
 	.about {
+		max-height: 80%;
 		width: 80%;
 		grid-template-columns: 1fr;
 		grid-template-rows: fit-content fit-content fit-content fit-content;
@@ -107,6 +108,8 @@
 				ul {
 					li {
 						font-size: 1.4vh;
+						padding: 3px 6px;
+						margin: 3px 2px;
 					}
 				}
 			}
@@ -124,16 +127,59 @@
 
 // TABLET PORTRAIT
 @media (min-width: 768px) and (max-width: 991.99px) {
+	.about {
+		width: 60%;
+	}
 }
 
 // TABLET LANDSCAPE
 @media (min-width: 992px) and (max-width: 1199.99px) {
+	.about {
+		width: 80%;
+	}
 }
 
 // NOTEBOOK
 @media (min-width: 1200px) and (max-width: 1399.99px) {
+	.about {
+		width: 80%;
+		&_element {
+			padding: 2vh;
+		}
+		#aboutme {
+			.about_element_content {
+				font-size: 2vh;
+			}
+		}
+	}
 }
 
-// DESKTOP
-@media (min-width: 1400px) {
+// 4K
+@media (min-width: 1921px) {
+	.about {
+		gap: 3vh 3vh;
+		&_element {
+			padding: 2vh;
+			border-radius: 1vw;
+			&_title {
+				margin-top: 0.6vw;
+			}
+			&_content {
+				margin: 1vw 0;
+				ul {
+					li {
+						border: 0.25vh solid white;
+						border-radius: 0.5vw;
+						padding: 0.4vh 0.6vh;
+						font-size: 1.4vh;
+					}
+				}
+			}
+		}
+		#aboutme {
+			.about_element_content {
+				font-size: 2vh;
+			}
+		}
+	}
 }

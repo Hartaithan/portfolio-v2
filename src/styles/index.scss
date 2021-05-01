@@ -16,6 +16,8 @@ body {
 }
 
 #app {
+	display: flex;
+	justify-content: center;
 	height: 100%;
 }
 
@@ -35,6 +37,6 @@ body {
 @media (min-width: 1200px) and (max-width: 1399.99px) {
 }
 
-// DESKTOP
-@media (min-width: 1400px) {
+// 4K
+@media (min-width: 1921px) {
 }

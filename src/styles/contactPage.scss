@@ -79,16 +79,37 @@
 
 // TABLET PORTRAIT
 @media (min-width: 768px) and (max-width: 991.99px) {
+	.contact {
+		width: 80%;
+	}
 }
 
 // TABLET LANDSCAPE
 @media (min-width: 992px) and (max-width: 1199.99px) {
+	.contact {
+		width: 80%;
+	}
 }
 
 // NOTEBOOK
 @media (min-width: 1200px) and (max-width: 1399.99px) {
+	.contact {
+		width: 60%;
+	}
 }
 
-// DESKTOP
-@media (min-width: 1400px) {
+// 4K
+@media (min-width: 1921px) {
+	.contact {
+		width: 40%;
+		&_icon {
+			height: 9vw;
+			width: 9vw;
+		}
+		&_icon:before {
+			border: 0.1vw solid white;
+			height: 8.8vw;
+			width: 8.8vw;
+		}
+	}
 }

@@ -6,12 +6,16 @@
 }
 
 .works {
-	width: 60%;
+	width: 100%;
 	height: 100%;
 	margin: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	.carousel {
+		width: 100%;
+		height: 100%;
+	}
 	&_main {
 		height: 100%;
 		max-width: 60%;
@@ -196,12 +200,49 @@
 
 // TABLET LANDSCAPE
 @media (min-width: 992px) and (max-width: 1199.99px) {
+	.works {
+		&_main {
+			max-width: 80%;
+		}
+		&_pages {
+			&_item {
+				height: 0.9vh;
+				width: 0.9vh;
+			}
+		}
+	}
 }
 
 // NOTEBOOK
 @media (min-width: 1200px) and (max-width: 1399.99px) {
+	.works {
+		&_main {
+			max-width: 70%;
+		}
+		&_pages {
+			&_item {
+				height: 0.95vh;
+				width: 0.95vh;
+			}
+		}
+	}
 }
 
-// DESKTOP
-@media (min-width: 1400px) {
+// 4K
+@media (min-width: 1921px) {
+	.works {
+		&_main {
+			&_container {
+				& > div:not(:last-of-type) {
+					margin-bottom: 0.6vw;
+				}
+				&_descr {
+					padding: 1vw;
+				}
+				&_links {
+					height: 1.2vw;
+				}
+			}
+		}
+	}
 }

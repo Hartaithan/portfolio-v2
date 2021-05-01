@@ -13,7 +13,7 @@
 	&_links:before {
 		content: "";
 		position: absolute;
-		top: 100%;
+		top: 93%;
 		left: 50%;
 		height: 2px;
 		width: 0%;
@@ -38,7 +38,7 @@
 	&_active:before {
 		content: "";
 		position: absolute;
-		top: 100%;
+		top: 93%;
 		left: 0;
 		height: 2px;
 		width: 100%;
@@ -97,6 +97,6 @@
 @media (min-width: 1200px) and (max-width: 1399.99px) {
 }
 
-// DESKTOP
-@media (min-width: 1400px) {
+// 4K
+@media (min-width: 1921px) {
 }

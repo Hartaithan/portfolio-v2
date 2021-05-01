@@ -58,12 +58,30 @@
 
 // TABLET LANDSCAPE
 @media (min-width: 992px) and (max-width: 1199.99px) {
+	.home {
+		width: 80%;
+	}
 }
 
 // NOTEBOOK
 @media (min-width: 1200px) and (max-width: 1399.99px) {
+	.home {
+		&_buttons {
+			&_button {
+				font-size: 1.8vh;
+			}
+		}
+	}
 }
 
-// DESKTOP
-@media (min-width: 1400px) {
+// 4K
+@media (min-width: 1921px) {
+	.home {
+		&_buttons {
+			&_button {
+				border: 0.25vh solid white;
+				padding: 1.5vh;
+			}
+		}
+	}
 }
