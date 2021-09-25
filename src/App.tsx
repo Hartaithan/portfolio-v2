@@ -10,17 +10,6 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import WorksPage from "./pages/WorksPage";
 
-function findVH() {
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty("--vh", `${vh}px`);
-}
-
-findVH();
-
-window.addEventListener("resize", () => {
-	findVH();
-});
-
 const App: React.FC = () => {
 	const location = useLocation();
 	return (

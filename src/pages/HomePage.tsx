@@ -9,26 +9,58 @@ const HomePage: React.FC = () => {
 		document.title = "Home | Hartaithan.";
 	});
 
+	const textAnimation = {
+		initial: {
+			x: 0,
+			y: -400,
+			opacity: 0,
+		},
+		animate: {
+			x: 0,
+			y: 0,
+			opacity: 1,
+		},
+	};
+
+	const buttonsAnimation = {
+		initial: {
+			x: 400,
+			y: 0,
+			opacity: 0,
+		},
+		animate: {
+			x: 0,
+			y: 0,
+			opacity: 1,
+		},
+	};
+
+	const MotionLink = motion(Link);
+
 	return (
 		<motion.div className="home" variants={containerAnimation} initial="hidden" animate="visible" exit="exit">
 			<div className="home_text">
-				Hello,
-				<br />
-				I’m Hartaithan.
-				<br />
-				Frontend Developer
+				<motion.p variants={textAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 0.4 }}>
+					Hello,
+				</motion.p>
+				<motion.p variants={textAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 0.2 }}>
+					I’m Hartaithan.
+				</motion.p>
+				<motion.p variants={textAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 0 }}>
+					Frontend Developer
+				</motion.p>
 			</div>
 			<div className="home_buttons">
-				<Link to={"/works"}>
-					<button className="home_buttons_button" id="works">
+				<MotionLink to={"/works"} variants={buttonsAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 0.8 }}>
+					<motion.button className="home_buttons_button" id="works">
 						My Works
-					</button>
-				</Link>
-				<a href="./data/resume.pdf" target="_blank" rel="noreferrer">
+					</motion.button>
+				</MotionLink>
+				<motion.a href="./data/resume.pdf" target="_blank" rel="noreferrer" variants={buttonsAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 1 }}>
 					<button className="home_buttons_button" id="resume">
 						Get Resume
 					</button>
-				</a>
+				</motion.a>
 			</div>
 		</motion.div>
 	);
