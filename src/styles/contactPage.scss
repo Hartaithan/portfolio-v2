@@ -59,17 +59,37 @@
 	}
 }
 
-// MOBILE
-@media (min-width: 300px) and (max-width: 767.99px) {
+@media (min-width: 1921px) {
+}
+
+@media (max-width: 1600px) {
 	.contact {
-		width: 90%;
+		width: 50%;
+	}
+}
+
+@media (max-width: 1400px) {
+	.contact {
+		width: 60%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.contact {
+		width: 70%;
+	}
+}
+
+@media (max-width: 992px) {
+	.contact {
+		width: 60%;
 		justify-content: center;
 		grid-template-columns: 45% 45%;
-		grid-template-rows: 20vh 20vh;
-		gap: 2vh 2vh;
+		grid-template-rows: fit-content fit-content;
+		gap: 30px;
 		&_icon {
-			height: 15vh;
-			width: 15vh;
+			height: 190px;
+			width: 190px;
 		}
 		&_icon:before {
 			opacity: 0;
@@ -77,39 +97,15 @@
 	}
 }
 
-// TABLET PORTRAIT
-@media (min-width: 768px) and (max-width: 991.99px) {
-	.contact {
-		width: 80%;
-	}
+@media (max-width: 768px) {
 }
 
-// TABLET LANDSCAPE
-@media (min-width: 992px) and (max-width: 1199.99px) {
+@media (max-width: 576px) {
 	.contact {
-		width: 80%;
-	}
-}
-
-// NOTEBOOK
-@media (min-width: 1200px) and (max-width: 1399.99px) {
-	.contact {
-		width: 60%;
-	}
-}
-
-// 4K
-@media (min-width: 1921px) {
-	.contact {
-		width: 40%;
+		width: 90%;
 		&_icon {
-			height: 9vw;
-			width: 9vw;
-		}
-		&_icon:before {
-			border: 0.1vw solid white;
-			height: 8.8vw;
-			width: 8.8vw;
+			height: 100px;
+			width: 100px;
 		}
 	}
 }

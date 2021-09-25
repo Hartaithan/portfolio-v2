@@ -20,23 +20,22 @@
 		padding: $about_el_pad;
 		border-radius: $about_el_bord_rad;
 		&_title {
-			min-height: 50px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			font-size: 28px;
 			font-weight: 500;
+			margin-bottom: 10px;
 			span {
 				height: fit-content;
 			}
 		}
 		&_content {
-			height: 100%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
-			margin: 10px 0;
+			flex-grow: 1;
 			ul {
 				display: flex;
 				justify-content: center;
@@ -49,6 +48,7 @@
 					border-radius: 10px;
 					border: 2px solid white;
 					padding: 5px 10px;
+					font-size: 16px;
 					font-weight: 500;
 					-webkit-transition: all 0.3s ease;
 					-moz-transition: all 0.3s ease;
@@ -84,33 +84,68 @@
 	}
 }
 
-// MOBILE
-@media (min-width: 300px) and (max-width: 767.99px) {
+@media (min-width: 1921px) {
+}
+
+@media (max-width: 1400px) {
+	.about {
+		width: 70%;
+		&_element {
+			&_title {
+				font-size: 24px;
+			}
+			&_content {
+				ul {
+					li {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.about {
+		width: 80%;
+	}
+}
+
+@media (max-width: 992px) {
 	.about {
 		max-height: 80%;
-		width: 80%;
 		grid-template-columns: 1fr;
 		grid-template-rows: fit-content fit-content fit-content fit-content;
-		gap: 1.5vh 0;
+		gap: 20px 0;
 		grid-template-areas:
 			"ABOUT"
 			"EL1"
 			"EL2"
 			"EL3";
+	}
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+	.about {
+		width: 80%;
 		&_element {
 			padding: $about_el_pad_mobile;
 			&_title {
-				min-height: 3vh;
-				font-size: 2.2vh;
+				height: fit-content;
+				font-size: 18px;
 			}
 			&_content {
 				height: fit-content;
-				margin-bottom: 0px;
 				ul {
 					li {
-						font-size: 1.4vh;
+						font-size: 10px;
 						padding: 3px 6px;
 						margin: 3px 2px;
+						border: 1px solid white;
+						border-radius: 8px;
 					}
 				}
 			}
@@ -121,66 +156,17 @@
 			}
 			.about_element_content {
 				justify-content: center;
+				font-size: 14px;
 			}
 		}
 	}
 }
 
-// TABLET PORTRAIT
-@media (min-width: 768px) and (max-width: 991.99px) {
+@media (max-width: 320px) {
 	.about {
-		width: 60%;
-	}
-}
-
-// TABLET LANDSCAPE
-@media (min-width: 992px) and (max-width: 1199.99px) {
-	.about {
-		width: 80%;
-	}
-}
-
-// NOTEBOOK
-@media (min-width: 1200px) and (max-width: 1399.99px) {
-	.about {
-		width: 80%;
+		width: 90%;
 		&_element {
-			padding: 2vh;
-		}
-		#aboutme {
-			.about_element_content {
-				font-size: 2vh;
-			}
-		}
-	}
-}
-
-// 4K
-@media (min-width: 1921px) {
-	.about {
-		gap: 3vh 3vh;
-		&_element {
-			padding: 2vh;
-			border-radius: 1vw;
-			&_title {
-				margin-top: 0.6vw;
-			}
-			&_content {
-				margin: 1vw 0;
-				ul {
-					li {
-						border: 0.25vh solid white;
-						border-radius: 0.5vw;
-						padding: 0.4vh 0.6vh;
-						font-size: 1.4vh;
-					}
-				}
-			}
-		}
-		#aboutme {
-			.about_element_content {
-				font-size: 2vh;
-			}
+			padding: 10px;
 		}
 	}
 }
