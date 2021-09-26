@@ -3,36 +3,55 @@ import "../styles/threejs.scss";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 
-function getFigure(min: number, max: number) {
-	const randNum = Math.floor(Math.random() * (max - min + 1) + min);
-	switch (true) {
-		case randNum >= 0 && randNum <= 10:
-			return <boxGeometry args={[1, 1, 1]} />; // КУБ
-		case randNum >= 11 && randNum <= 20:
-			return <icosahedronGeometry args={[0.7, 1]} />; // ПОЛГОНАЛЬНАЯ СФЕРА
-		case randNum >= 21 && randNum <= 30:
-			return <octahedronGeometry args={[0.7, 0]} />; // РОМБ
-		case randNum >= 31 && randNum <= 40:
-			return <torusKnotGeometry args={[0.5, 0.08, 160, 10, 3, 5]} />; // ТОР-УЗЕЛ
-		case randNum >= 41 && randNum <= 50:
-			return <sphereGeometry args={[0.7, 32, 16]} />; // СФЕРА
-		default:
-			return <boxGeometry args={[1, 1, 1]} />;
-	}
+function randomNumber(min: number, max: number) {
+	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const randFigure = getFigure(0, 50);
-
 function Box(props: JSX.IntrinsicElements["mesh"]) {
+	const randNum = randomNumber(0, 60);
 	const mesh = React.useRef<THREE.Mesh>(null!);
-	useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+	const material = new THREE.MeshStandardMaterial({ color: "white", wireframe: true, transparent: true, opacity: 0.3 });
 
-	return (
-		<mesh {...props} ref={mesh} scale={2}>
-			{randFigure}
-			<meshStandardMaterial color="white" wireframe={true} transparent={true} opacity={0.3} />
-		</mesh>
-	);
+	let geometry;
+	let scale: number = 2;
+	let rotation: number;
+
+	switch (true) {
+		case randNum >= 0 && randNum <= 10:
+			geometry = new THREE.BoxGeometry(1, 1, 1); // КУБ
+			scale = 2;
+			rotation = 0.01;
+			break;
+		case randNum >= 11 && randNum <= 20:
+			geometry = new THREE.IcosahedronGeometry(1, 1); // ПОЛГОНАЛЬНАЯ СФЕРА
+			scale = 1.5;
+			rotation = 0.006;
+			break;
+		case randNum >= 21 && randNum <= 30:
+			geometry = new THREE.OctahedronGeometry(1, 0); // РОМБ
+			scale = 1.5;
+			rotation = 0.01;
+			break;
+		case randNum >= 31 && randNum <= 40:
+			geometry = new THREE.TorusKnotGeometry(1, 0.1, 160, 10, 3, 5); // ТОР-УЗЕЛ
+			scale = 1.2;
+			rotation = 0.01;
+			break;
+		case randNum >= 41 && randNum <= 50:
+			geometry = new THREE.SphereGeometry(1, 24, 16); // СФЕРА
+			scale = 1.5;
+			rotation = 0.006;
+			break;
+		case randNum >= 51 && randNum <= 60:
+			geometry = new THREE.TetrahedronGeometry(1, 0); // ТЕТРАЭДР
+			scale = 2;
+			rotation = 0.01;
+			break;
+	}
+
+	useFrame(() => (mesh.current.rotation.y += rotation));
+
+	return <mesh {...props} ref={mesh} geometry={geometry} material={material} scale={scale} />;
 }
 
 const ThreeJS: React.FC = () => {
