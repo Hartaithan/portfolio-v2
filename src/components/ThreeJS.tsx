@@ -37,7 +37,7 @@ function Box(props: JSX.IntrinsicElements["mesh"]) {
 
 const ThreeJS: React.FC = () => {
 	return (
-		<Canvas className="threejs">
+		<Canvas className="threejs" dpr={window.devicePixelRatio}>
 			<ambientLight />
 			<Box position={[0, 0, 0]} />
 		</Canvas>
