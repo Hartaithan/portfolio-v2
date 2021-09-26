@@ -8,7 +8,7 @@ function randomNumber(min: number, max: number) {
 }
 
 function Box(props: JSX.IntrinsicElements["mesh"]) {
-	const randNum = randomNumber(0, 60);
+	const randNum = randomNumber(0, 70);
 	const mesh = React.useRef<THREE.Mesh>(null!);
 	const material = new THREE.MeshStandardMaterial({ color: "white", wireframe: true, transparent: true, opacity: 0.3 });
 
@@ -45,6 +45,11 @@ function Box(props: JSX.IntrinsicElements["mesh"]) {
 		case randNum >= 51 && randNum <= 60:
 			geometry = new THREE.TetrahedronGeometry(1, 0); // ТЕТРАЭДР
 			scale = 2;
+			rotation = 0.01;
+			break;
+		case randNum >= 61 && randNum <= 70:
+			geometry = new THREE.TorusGeometry(25, 10, 8, 4); // УГЛОВАТЫЙ ТОР
+			scale = 0.05;
 			rotation = 0.01;
 			break;
 	}
