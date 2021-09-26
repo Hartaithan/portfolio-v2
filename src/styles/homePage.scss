@@ -36,10 +36,10 @@
 			-ms-transition: all 0.3s ease;
 			-o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-		}
-		&_button:hover {
-			background: white;
-			color: black;
+			&:hover {
+				background: white;
+				color: black;
+			}
 		}
 		#works {
 			margin-right: 20px;

@@ -9,41 +9,41 @@
 		font-size: 24px;
 		font-weight: bold;
 		text-transform: uppercase;
-	}
-	&_links:before {
-		content: "";
-		position: absolute;
-		top: 93%;
-		left: 50%;
-		height: 2px;
-		width: 0%;
-		opacity: 0;
-		background: white;
-		-webkit-transition: all 0.3s ease;
-		-moz-transition: all 0.3s ease;
-		-ms-transition: all 0.3s ease;
-		-o-transition: all 0.3s ease;
-		transition: all 0.3s ease;
-	}
-	&_links:hover {
 		&:before {
-			width: 100%;
-			left: 0;
-			opacity: 1;
+			content: "";
+			position: absolute;
+			top: 93%;
+			left: 50%;
+			height: 2px;
+			width: 0%;
+			opacity: 0;
+			background: white;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+		&:hover {
+			&:before {
+				width: 100%;
+				left: 0;
+				opacity: 1;
+			}
 		}
 	}
 	&_active {
 		pointer-events: none;
-	}
-	&_active:before {
-		content: "";
-		position: absolute;
-		top: 93%;
-		left: 0;
-		height: 2px;
-		width: 100%;
-		opacity: 1;
-		background: white;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 93%;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			opacity: 1;
+			background: white;
+		}
 	}
 	#home {
 		top: $links_pos;
