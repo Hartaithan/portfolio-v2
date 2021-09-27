@@ -35,8 +35,6 @@ const HomePage: React.FC = () => {
 		},
 	};
 
-	const MotionLink = motion(Link);
-
 	return (
 		<motion.div className="home" variants={containerAnimation} initial="hidden" animate="visible" exit="exit">
 			<div className="home_text">
@@ -51,16 +49,20 @@ const HomePage: React.FC = () => {
 				</motion.p>
 			</div>
 			<div className="home_buttons">
-				<MotionLink to={"/works"} variants={buttonsAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 0.8 }}>
-					<motion.button className="home_buttons_button" id="works">
-						My Works
-					</motion.button>
-				</MotionLink>
-				<motion.a href="./data/resume.pdf" target="_blank" rel="noreferrer" variants={buttonsAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 1 }}>
-					<button className="home_buttons_button" id="resume">
-						Get Resume
-					</button>
-				</motion.a>
+				<motion.div className="home_buttons_wrapper" variants={buttonsAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 0.8 }}>
+					<Link to={"/works"}>
+						<button className="home_buttons_button" id="works">
+							My Works
+						</button>
+					</Link>
+				</motion.div>
+				<motion.div className="home_buttons_wrapper" variants={buttonsAnimation} initial="initial" animate="animate" transition={{ duration: 0.5, delay: 1 }}>
+					<a href="./data/resume.pdf" target="_blank" rel="noreferrer">
+						<button className="home_buttons_button" id="resume">
+							Get Resume
+						</button>
+					</a>
+				</motion.div>
 			</div>
 		</motion.div>
 	);

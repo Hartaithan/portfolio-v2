@@ -28,7 +28,6 @@
 			font-size: 16px;
 			font-weight: 600;
 			text-transform: uppercase;
-			margin-top: 20px;
 			cursor: pointer;
 			outline: none;
 			-webkit-transition: all 0.3s ease;
@@ -41,8 +40,11 @@
 				color: black;
 			}
 		}
-		#works {
-			margin-right: 20px;
+		&_wrapper {
+			margin-top: 20px;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
 		}
 	}
 }
