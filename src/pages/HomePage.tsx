@@ -1,39 +1,13 @@
 import React from "react";
 import "../styles/homePage.scss";
 import { motion } from "framer-motion";
-import { containerAnimation } from "../animations";
+import { buttonsAnimation, textAnimation, containerAnimation } from "../animations";
 import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
 	React.useEffect(() => {
 		document.title = "Home | Hartaithan.";
 	});
-
-	const textAnimation = {
-		initial: {
-			x: 0,
-			y: -400,
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			y: 0,
-			opacity: 1,
-		},
-	};
-
-	const buttonsAnimation = {
-		initial: {
-			x: 400,
-			y: 0,
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			y: 0,
-			opacity: 1,
-		},
-	};
 
 	return (
 		<motion.div className="home" variants={containerAnimation} initial="hidden" animate="visible" exit="exit">

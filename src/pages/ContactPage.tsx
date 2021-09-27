@@ -7,6 +7,7 @@ const ContactPage: React.FC = () => {
 	React.useEffect(() => {
 		document.title = "Contact | Hartaithan.";
 	});
+
 	return (
 		<motion.div className="contact" variants={containerAnimation} initial="hidden" animate="visible" exit="exit">
 			<a href="mailto:hartaithan@gmail.com" target="_blank" rel="noreferrer">

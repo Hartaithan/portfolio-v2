@@ -34,3 +34,29 @@ export const sliderAnimation = {
 		};
 	},
 };
+
+export const textAnimation = {
+	initial: {
+		x: 0,
+		y: -400,
+		opacity: 0,
+	},
+	animate: {
+		x: 0,
+		y: 0,
+		opacity: 1,
+	},
+};
+
+export const buttonsAnimation = {
+	initial: {
+		x: 400,
+		y: 0,
+		opacity: 0,
+	},
+	animate: {
+		x: 0,
+		y: 0,
+		opacity: 1,
+	},
+};

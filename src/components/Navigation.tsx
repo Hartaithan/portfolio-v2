@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navigation: React.FC = () => {
 	const loc = useLocation();
+	
 	return (
 		<div className="nav">
 			<Link className={loc.pathname === "/" ? `nav_links nav_active` : "nav_links"} id="home" to={"/"}>
