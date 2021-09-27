@@ -21,9 +21,9 @@
 		"id": 2,
 		"name": "Camo Tracker",
 		"categ": "Web App | React",
-		"descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices.",
+		"descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Heroku",
 		"img": "./img/works/camo-tracker.png",
-		"tags": ["NODE.JS", "MONGO DB", "REACT", "ROUTER DOM", "REDUX"],
+		"tags": ["NODE.JS", "EXPRESS.JS", "MONGODB", "REACT", "ROUTER DOM", "REDUX", "HEROKU"],
 		"links": [
 			{
 				"svg": "github",
