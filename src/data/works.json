@@ -21,17 +21,17 @@
 		"id": 2,
 		"name": "Camo Tracker",
 		"categ": "Web App | React",
-		"descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with React, Redux, Router Dom. Design is adapted for desktop and mobile devices. Progress is saved by storing state in localStorage. In the future I plan to add authentication and progress storage on the server (Node.JS, MongoDB).",
+		"descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices.",
 		"img": "./img/works/camo-tracker.png",
-		"tags": ["REACT", "ROUTER DOM", "REDUX", "NODE SASS", "LOCALSTORAGE"],
+		"tags": ["NODE.JS", "MONGO DB", "REACT", "ROUTER DOM", "REDUX"],
 		"links": [
 			{
 				"svg": "github",
-				"src": "https://github.com/Hartaithan/camo-tracker/"
+				"src": "https://github.com/Hartaithan/camo-tracker-v2"
 			},
 			{
 				"svg": "link",
-				"src": "https://hartaithan.github.io/camo-tracker/"
+				"src": "https://camo-tracker.herokuapp.com/"
 			}
 		]
 	},
