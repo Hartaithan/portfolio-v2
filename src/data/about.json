@@ -2,7 +2,7 @@
   {
     "id": "aboutme",
     "title": "About Me",
-    "content": "I'm a self-taught front-end developer, with little experience, but with a great desire to become a first-class specialist. I started my development journey by writing a small text-based game for Android. At the moment my preferred technology is React.",
+    "content": "I'm a self-taught front-end developer, with a bit of experience, but with a great desire to become a first-class specialist. I started my development journey by writing a small text-based game for Android. At the moment my preferred technology is React.",
     "containsTags": false,
     "tags": []
   },
