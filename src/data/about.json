@@ -11,7 +11,7 @@
 		"title": "Front-End Skills",
 		"content": "Front-End Skills",
 		"containsTags": true,
-		"tags": ["HTML", "CSS", "SASS", "RESP. DESIGN", "JS ES6+", "TS 4+", "REACT", "REDUX"]
+		"tags": ["HTML", "CSS", "SASS", "BOOTSTRAP", "RESP. DESIGN", "JS ES6+", "TS 4+", "REACT", "REDUX"]
 	},
 	{
 		"id": "backend",
@@ -21,10 +21,10 @@
 		"tags": ["NODE.JS", "MONGO DB", "EXPRESS.JS", "NPM | YARN", "AUTHENTICATION"]
 	},
 	{
-		"id": "other",
-		"title": "Other Skills",
-		"content": "Other Skills",
+		"id": "mobile",
+		"title": "Mobile Skills",
+		"content": "Mobile Skills",
 		"containsTags": true,
-		"tags": ["GIT", "AFTER EFFECTS", "PREMIERE", "PHOTOSHOP", "FIGMA", "KOTLIN"]
+		"tags": ["ANDROID", "ANDROID SDK", "KOTLIN", "JAVA", "VOLLEY"]
 	}
 ]

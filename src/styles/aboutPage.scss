@@ -19,6 +19,9 @@
 		background: rgba($color-grey, 0.8);
 		padding: $about_el_pad;
 		border-radius: $about_el_bord_rad;
+		&.withTags {
+			padding: 20px 10px;
+		}
 		&_title {
 			display: flex;
 			justify-content: center;

@@ -23,7 +23,7 @@ const AboutPage: React.FC = () => {
 					);
 				} else {
 					return (
-						<div className="about_element" id={item.id} key={item.id}>
+						<div className="about_element withTags" id={item.id} key={item.id}>
 							<div className="about_element_title">{item.title}</div>
 							<div className="about_element_content">
 								<ul>
