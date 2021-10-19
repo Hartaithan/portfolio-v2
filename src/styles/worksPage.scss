@@ -57,10 +57,9 @@
 					li {
 						margin: 5px 3px;
 						width: fit-content;
-						background: transparent;
-						border-radius: 10px;
-						border: 2px solid white;
-						padding: 5px 10px;
+						background: rgba(27,27,27,.8);
+						border-radius: 15px;
+						padding: 7px 12px;
 						font-size: 14px;
 						font-weight: 500;
 						-webkit-transition: all 0.3s ease;
@@ -69,8 +68,7 @@
 						-o-transition: all 0.3s ease;
 						transition: all 0.3s ease;
 						&:hover {
-							background: white;
-							color: black;
+							background: rgb(50 50 50);
 						}
 						&:last-child {
 							margin-right: 0;
