@@ -20,7 +20,9 @@
       "JS ES6+",
       "TS 4+",
       "REACT",
-      "REDUX"
+      "REDUX",
+      "NEXT.JS",
+      "SSR"
     ]
   },
   {
