@@ -167,9 +167,14 @@
 
 @media (max-width: 320px) {
   .about {
+		overflow: auto;
+		max-height: 80%;
     width: 90%;
+		align-content: flex-start;
     &_element {
-      padding: 10px;
+			&.withTags {
+				padding: 15px;
+			}
     }
   }
 }
