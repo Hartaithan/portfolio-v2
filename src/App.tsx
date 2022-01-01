@@ -11,21 +11,21 @@ import HomePage from "./pages/HomePage";
 import WorksPage from "./pages/WorksPage";
 
 const App: React.FC = () => {
-	const location = useLocation();
-	return (
-		<>
-			<Navigation />
-			<AnimatePresence exitBeforeEnter>
-				<Switch location={location} key={location.key}>
-					<Route component={HomePage} path="/" exact />
-					<Route component={AboutPage} path="/about" />
-					<Route component={WorksPage} path="/works" />
-					<Route component={ContactPage} path="/contact" />
-				</Switch>
-			</AnimatePresence>
-			<ThreeJS />
-		</>
-	);
+  const location = useLocation();
+  return (
+    <>
+      <Navigation />
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route component={HomePage} path="/" exact />
+          <Route component={AboutPage} path="/about" />
+          <Route component={WorksPage} path="/works" />
+          <Route component={ContactPage} path="/contact" />
+        </Switch>
+      </AnimatePresence>
+      <ThreeJS />
+    </>
+  );
 };
 
 export default App;

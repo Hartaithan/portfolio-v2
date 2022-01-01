@@ -1,74 +1,90 @@
 [
-	{
-		"id": 1,
-		"name": "A-Z",
-		"categ": "Mobile Game | Android",
-		"descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
-		"img": "./img/works/a-z.png",
-		"tags": ["ANDROID", "KOTLIN", "VOLLEY"],
-		"links": [
-			{
-				"svg": "playmarket",
-				"src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
-			},
-			{
-				"svg": "link",
-				"src": "https://hartaithan.github.io/a-z/"
-			}
-		]
-	},
-	{
-		"id": 2,
-		"name": "Camo Tracker",
-		"categ": "Web App | React",
-		"descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Heroku",
-		"img": "./img/works/camo-tracker.png",
-		"tags": ["NODE.JS", "EXPRESS.JS", "MONGODB", "REACT", "ROUTER DOM", "REDUX", "HEROKU"],
-		"links": [
-			{
-				"svg": "github",
-				"src": "https://github.com/Hartaithan/camo-tracker-v2"
-			},
-			{
-				"svg": "link",
-				"src": "https://camo-tracker.herokuapp.com/"
-			}
-		]
-	},
-	{
-		"id": 3,
-		"name": "Whiteboard",
-		"categ": "Web App | React",
-		"descr": "A test project for learn websockets. A simple collaborative whiteboard for planning something together or just drawing with a friend. Work in progress...",
-		"img": "./img/works/whiteboard.png",
-		"tags": ["NODE.JS", "EXPRESS.JS", "REACT", "WEBSOCKETS", "SOCKET.IO", "HTML5 CANVAS", "HEROKU"],
-		"links": [
-			{
-				"svg": "github",
-				"src": "https://github.com/Hartaithan/whiteboard"
-			},
-			{
-				"svg": "link",
-				"src": "https://this-is-whiteboard.herokuapp.com/"
-			}
-		]
-	},
-	{
-		"id": 4,
-		"name": "¯〵_(ツ)_/¯",
-		"categ": "More coming soon",
-		"descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
-		"img": "https://media1.tenor.com/images/5dd27507782940e1a2eb4a2cfdf5fad5/tenor.gif?itemid=18638749",
-		"tags": ["MORE", "COMING", "SOON"],
-		"links": [
-			{
-				"svg": "github",
-				"src": "https://github.com/hartaithan"
-			},
-			{
-				"svg": "link",
-				"src": "https://hartaithan.github.io/"
-			}
-		]
-	}
+  {
+    "id": 1,
+    "name": "A-Z",
+    "categ": "Mobile Game | Android",
+    "descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
+    "img": "./img/works/a-z.png",
+    "tags": ["ANDROID", "KOTLIN", "VOLLEY"],
+    "links": [
+      {
+        "svg": "playmarket",
+        "src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
+      },
+      {
+        "svg": "link",
+        "src": "https://hartaithan.github.io/a-z/"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Camo Tracker",
+    "categ": "Web App | React",
+    "descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Heroku",
+    "img": "./img/works/camo-tracker.png",
+    "tags": [
+      "NODE.JS",
+      "EXPRESS.JS",
+      "MONGODB",
+      "REACT",
+      "ROUTER DOM",
+      "REDUX",
+      "HEROKU"
+    ],
+    "links": [
+      {
+        "svg": "github",
+        "src": "https://github.com/Hartaithan/camo-tracker-v2"
+      },
+      {
+        "svg": "link",
+        "src": "https://camo-tracker.herokuapp.com/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Whiteboard",
+    "categ": "Web App | React",
+    "descr": "A test project for learn websockets. A simple collaborative whiteboard for planning something together or just drawing with a friend. Work in progress...",
+    "img": "./img/works/whiteboard.png",
+    "tags": [
+      "NODE.JS",
+      "EXPRESS.JS",
+      "REACT",
+      "WEBSOCKETS",
+      "SOCKET.IO",
+      "HTML5 CANVAS",
+      "HEROKU"
+    ],
+    "links": [
+      {
+        "svg": "github",
+        "src": "https://github.com/Hartaithan/whiteboard"
+      },
+      {
+        "svg": "link",
+        "src": "https://this-is-whiteboard.herokuapp.com/"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "¯〵_(ツ)_/¯",
+    "categ": "More coming soon",
+    "descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
+    "img": "https://media1.tenor.com/images/5dd27507782940e1a2eb4a2cfdf5fad5/tenor.gif?itemid=18638749",
+    "tags": ["MORE", "COMING", "SOON"],
+    "links": [
+      {
+        "svg": "github",
+        "src": "https://github.com/hartaithan"
+      },
+      {
+        "svg": "link",
+        "src": "https://hartaithan.github.io/"
+      }
+    ]
+  }
 ]
