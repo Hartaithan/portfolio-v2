@@ -4,15 +4,14 @@ import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 
 const ThreeJS: React.FC = React.memo(() => {
-  function randomNumber(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+  function getRandNum(max: number) {
+    return Math.floor(Math.random() * max) + 1;
   }
 
   const Figure = () => {
     const font = useLoader(THREE.FontLoader, "/fonts/roboto.json");
-    const randNum = randomNumber(0, 110);
     const mesh = React.useRef<THREE.Mesh>(null!);
-    const fontOptions = React.useMemo(
+    const options = React.useMemo(
       () => ({
         font: font,
         size: 2,
@@ -32,67 +31,96 @@ const ThreeJS: React.FC = React.memo(() => {
       transparent: true,
       opacity: 0.3,
     });
+    const figures = [
+      {
+        id: 1,
+        name: "CUBE",
+        geometry: new THREE.BoxGeometry(1, 1, 1),
+        scale: 2,
+        rotation: 0.01,
+      },
+      {
+        id: 2,
+        name: "POLYGONAL SPHERE",
+        geometry: new THREE.IcosahedronGeometry(1, 1),
+        scale: 1.5,
+        rotation: 0.006,
+      },
+      {
+        id: 3,
+        name: "RHOMBUS",
+        geometry: new THREE.OctahedronGeometry(1, 0),
+        scale: 1.5,
+        rotation: 0.01,
+      },
+      {
+        id: 4,
+        name: "TORUS KNOT",
+        geometry: new THREE.TorusKnotGeometry(1, 0.1, 160, 10, 3, 5),
+        scale: 1,
+        rotation: 0.01,
+      },
+      {
+        id: 5,
+        name: "SPHERE",
+        geometry: new THREE.SphereGeometry(1, 24, 16),
+        scale: 1.5,
+        rotation: 0.006,
+      },
+      {
+        id: 6,
+        name: "TETRAHEDRON",
+        geometry: new THREE.TetrahedronGeometry(1, 0),
+        scale: 1.8,
+        rotation: 0.01,
+      },
+      {
+        id: 7,
+        name: "POLYGONAL TORUS",
+        geometry: new THREE.TorusGeometry(25, 10, 4, 4),
+        scale: 0.05,
+        rotation: 0.01,
+      },
+      {
+        id: 8,
+        name: ":D",
+        geometry: new THREE.TextGeometry(":D", options).center(),
+        scale: 1.2,
+        rotation: 0.01,
+      },
+      {
+        id: 9,
+        name: "(•_•)",
+        geometry: new THREE.TextGeometry("(•_•)", options).center(),
+        scale: 0.7,
+        rotation: 0.01,
+      },
+      {
+        id: 10,
+        name: "D:",
+        geometry: new THREE.TextGeometry("D:", options).center(),
+        scale: 1.2,
+        rotation: 0.01,
+      },
+      {
+        id: 11,
+        name: "H",
+        geometry: new THREE.TextGeometry("H", options).center(),
+        scale: 1.5,
+        rotation: 0.01,
+      },
+    ];
 
     let geometry;
-    let scale: number = 2;
-    let rotation: number;
+    let scale = 1;
+    let rotation = 0.01;
 
-    switch (true) {
-      case randNum >= 0 && randNum <= 10:
-        geometry = new THREE.BoxGeometry(1, 1, 1); // КУБ
-        scale = 2;
-        rotation = 0.01;
-        break;
-      case randNum >= 11 && randNum <= 20:
-        geometry = new THREE.IcosahedronGeometry(1, 1); // ПОЛГОНАЛЬНАЯ СФЕРА
-        scale = 1.5;
-        rotation = 0.006;
-        break;
-      case randNum >= 21 && randNum <= 30:
-        geometry = new THREE.OctahedronGeometry(1, 0); // РОМБ
-        scale = 1.5;
-        rotation = 0.01;
-        break;
-      case randNum >= 31 && randNum <= 40:
-        geometry = new THREE.TorusKnotGeometry(1, 0.1, 160, 10, 3, 5); // ТОР-УЗЕЛ
-        scale = 1;
-        rotation = 0.01;
-        break;
-      case randNum >= 41 && randNum <= 50:
-        geometry = new THREE.SphereGeometry(1, 24, 16); // СФЕРА
-        scale = 1.5;
-        rotation = 0.006;
-        break;
-      case randNum >= 51 && randNum <= 60:
-        geometry = new THREE.TetrahedronGeometry(1, 0); // ТЕТРАЭДР
-        scale = 1.8;
-        rotation = 0.01;
-        break;
-      case randNum >= 61 && randNum <= 70:
-        geometry = new THREE.TorusGeometry(25, 10, 4, 4); // УГЛОВАТЫЙ ТОР
-        scale = 0.05;
-        rotation = 0.01;
-        break;
-      case randNum >= 71 && randNum <= 80:
-        geometry = new THREE.TextGeometry(":D", fontOptions).center();
-        scale = 1.2;
-        rotation = 0.01;
-        break;
-      case randNum >= 81 && randNum <= 90:
-        geometry = new THREE.TextGeometry("(•_•)", fontOptions).center();
-        scale = 0.7;
-        rotation = 0.01;
-        break;
-      case randNum >= 91 && randNum <= 100:
-        geometry = new THREE.TextGeometry("D:", fontOptions).center();
-        scale = 1.2;
-        rotation = 0.01;
-        break;
-      case randNum >= 101 && randNum <= 110:
-        geometry = new THREE.TextGeometry("H", fontOptions).center();
-        scale = 1.5;
-        rotation = 0.01;
-        break;
+    const index = getRandNum(figures.length);
+    const randomFigure = figures.find((x) => x.id === index);
+    if (randomFigure) {
+      geometry = randomFigure.geometry;
+      scale = randomFigure.scale;
+      rotation = randomFigure.rotation;
     }
 
     useFrame(() => {
