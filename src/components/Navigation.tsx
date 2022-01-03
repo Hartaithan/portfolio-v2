@@ -4,43 +4,48 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   const loc = useLocation();
+  const links = [
+    {
+      id: 1,
+      selector: "home",
+      name: "Home",
+      pathname: "/",
+    },
+    {
+      id: 2,
+      selector: "works",
+      name: "Works",
+      pathname: "/works",
+    },
+    {
+      id: 3,
+      selector: "about",
+      name: "About Me",
+      pathname: "/about",
+    },
+    {
+      id: 4,
+      selector: "contact",
+      name: "Contact",
+      pathname: "/contact",
+    },
+  ];
 
   return (
     <div className="nav">
-      <Link
-        className={loc.pathname === "/" ? `nav_links nav_active` : "nav_links"}
-        id="home"
-        to={"/"}
-      >
-        Home
-      </Link>
-      <Link
-        className={
-          loc.pathname === "/works" ? `nav_links nav_active` : "nav_links"
-        }
-        id="works"
-        to={"/works"}
-      >
-        Works
-      </Link>
-      <Link
-        className={
-          loc.pathname === "/about" ? `nav_links nav_active` : "nav_links"
-        }
-        id="about"
-        to={"/about"}
-      >
-        About Me
-      </Link>
-      <Link
-        className={
-          loc.pathname === "/contact" ? `nav_links nav_active` : "nav_links"
-        }
-        id="contact"
-        to={"/contact"}
-      >
-        Contact
-      </Link>
+      {links.map((link) => (
+        <Link
+          className={
+            loc.pathname === link.pathname
+              ? `nav_links nav_active`
+              : "nav_links"
+          }
+          id={link.selector}
+          to={link.pathname}
+        >
+          {link.name}
+        </Link>
+      ))}
     </div>
   );
 };
