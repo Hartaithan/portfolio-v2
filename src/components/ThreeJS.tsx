@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/threejs.scss";
 import * as THREE from "three";
+import { motion } from "framer-motion";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { canvasAnimation } from "../animations";
 
 const ThreeJS: React.FC = React.memo(() => {
   function getRandNum(max: number) {
@@ -140,10 +142,12 @@ const ThreeJS: React.FC = React.memo(() => {
 
   return (
     <React.Suspense fallback={null}>
-      <Canvas className="threejs" dpr={window.devicePixelRatio}>
-        <ambientLight />
-        <Figure />
-      </Canvas>
+      <motion.div variants={canvasAnimation} initial="hidden" animate="visible">
+        <Canvas className="threejs" dpr={window.devicePixelRatio}>
+          <ambientLight />
+          <Figure />
+        </Canvas>
+      </motion.div>
     </React.Suspense>
   );
 });
