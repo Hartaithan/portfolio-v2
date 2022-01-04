@@ -117,6 +117,13 @@ const ThreeJS: React.FC = React.memo(() => {
     let scale = 1;
     let rotation = 0.01;
 
+    const animations = {
+      x: Math.random() < 0.5,
+      y: Math.random() < 0.5,
+      z: Math.random() < 0.5,
+      float: Math.random() < 0.5,
+    };
+
     const index = getRandNum(figures.length);
     const randomFigure = figures.find((x) => x.id === index);
     if (randomFigure) {
@@ -125,8 +132,13 @@ const ThreeJS: React.FC = React.memo(() => {
       rotation = randomFigure.rotation;
     }
 
-    useFrame(() => {
-      mesh.current.rotation.y += rotation;
+    useFrame((state) => {
+      mesh.current.position.y = animations.float
+        ? Math.sin(state.clock.getElapsedTime()) * 0.1
+        : 0;
+      mesh.current.rotation.x += animations.x ? rotation : 0;
+      mesh.current.rotation.y += animations.y ? rotation : 0;
+      mesh.current.rotation.z += animations.z ? rotation : 0;
     });
 
     return (
