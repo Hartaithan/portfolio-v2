@@ -40,6 +40,7 @@ const Navigation: React.FC = () => {
               ? `nav_links nav_active`
               : "nav_links"
           }
+          key={link.selector}
           id={link.selector}
           to={link.pathname}
         >
