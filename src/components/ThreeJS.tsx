@@ -5,12 +5,28 @@ import { motion } from "framer-motion";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { canvasAnimation } from "../animations";
 
+const sizes = {
+  width: window.innerWidth,
+  height: window.innerHeight,
+};
+
+const cursor = {
+  x: 0,
+  y: 0,
+};
+
 const ThreeJS: React.FC = React.memo(() => {
+  window.addEventListener("mousemove", (event) => {
+    cursor.x = event.clientX / sizes.width - 0.5;
+    cursor.y = event.clientY / sizes.height - 0.5;
+  });
+
   function getRandNum(max: number) {
     return Math.floor(Math.random() * max) + 1;
   }
 
   const Figure = () => {
+    const camera = React.useRef<THREE.Camera>();
     const font = useLoader(THREE.FontLoader, "/fonts/inter.json");
     const mesh = React.useRef<THREE.Mesh>(null!);
     const options = React.useMemo(
@@ -141,16 +157,30 @@ const ThreeJS: React.FC = React.memo(() => {
     useFrame((state) => {
       mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.1;
       mesh.current.rotation.y += rotation;
+      if (camera.current && mesh.current.position) {
+        camera.current.position.x = Math.sin(cursor.x * Math.PI * 2) * 0.5;
+        camera.current.position.z = Math.cos(cursor.x * Math.PI * 2) * 0.5;
+        camera.current.position.y = cursor.y * 2;
+        camera.current.lookAt(mesh.current.position);
+      }
     });
 
     return (
-      <mesh
-        position={[0, 0, 0]}
-        ref={mesh}
-        geometry={geometry}
-        material={material}
-        scale={scale}
-      />
+      <perspectiveCamera
+        ref={camera}
+        fov={60}
+        aspect={sizes.width / sizes.height}
+        near={0.1}
+        far={80}
+      >
+        <mesh
+          position={[0, 0, 0]}
+          ref={mesh}
+          geometry={geometry}
+          material={material}
+          scale={scale}
+        />
+      </perspectiveCamera>
     );
   };
 
