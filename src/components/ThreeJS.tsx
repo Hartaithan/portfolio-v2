@@ -111,8 +111,21 @@ const ThreeJS: React.FC = React.memo(() => {
         scale: 1.5,
         rotation: 0.01,
       },
+      {
+        id: 12,
+        name: "( ͡° ͜ʖ ͡°)",
+        geometry: new THREE.TextGeometry("( ͡° ͜ʖ ͡°)", options).center(),
+        scale: 0.4,
+        rotation: 0.01,
+      },
+      {
+        id: 13,
+        name: "if",
+        geometry: new THREE.TextGeometry("if", options).center(),
+        scale: 1.3,
+        rotation: 0.01,
+      },
     ];
-
     let geometry;
     let scale = 1;
     let rotation = 0.01;
