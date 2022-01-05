@@ -11,7 +11,7 @@ const ThreeJS: React.FC = React.memo(() => {
   }
 
   const Figure = () => {
-    const font = useLoader(THREE.FontLoader, "/fonts/roboto.json");
+    const font = useLoader(THREE.FontLoader, "/fonts/inter.json");
     const mesh = React.useRef<THREE.Mesh>(null!);
     const options = React.useMemo(
       () => ({
@@ -79,7 +79,7 @@ const ThreeJS: React.FC = React.memo(() => {
       {
         id: 7,
         name: "POLYGONAL TORUS",
-        geometry: new THREE.TorusGeometry(25, 10, 4, 4),
+        geometry: new THREE.TorusGeometry(25, 8, 4, 4),
         scale: 0.05,
         rotation: 0.01,
       },
@@ -94,7 +94,7 @@ const ThreeJS: React.FC = React.memo(() => {
         id: 9,
         name: "(•_•)",
         geometry: new THREE.TextGeometry("(•_•)", options).center(),
-        scale: 0.7,
+        scale: 0.55,
         rotation: 0.01,
       },
       {
