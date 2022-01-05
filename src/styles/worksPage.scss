@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 2 !important;
     &_container {
       align-self: flex-end;
       width: 60%;
