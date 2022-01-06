@@ -16,10 +16,25 @@ const cursor = {
 };
 
 const ThreeJS: React.FC = React.memo(() => {
-  window.addEventListener("mousemove", (event) => {
-    cursor.x = event.clientX / sizes.width - 0.5;
-    cursor.y = event.clientY / sizes.height - 0.5;
+  window.addEventListener("mousemove", (event: MouseEvent) => {
+    if (window.innerWidth > 768) {
+      cursor.x = event.clientX / sizes.width - 0.5;
+      cursor.y = event.clientY / sizes.height - 0.5;
+    }
   });
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener(
+      "deviceorientation",
+      (event: DeviceOrientationEvent) => {
+        if (window.innerWidth < 768 && event.gamma && event.beta) {
+          cursor.x = event.gamma * 0.03;
+          cursor.y = event.beta * 0.01;
+        }
+      },
+      true
+    );
+  }
 
   function getRandNum(max: number) {
     return Math.floor(Math.random() * max) + 1;
@@ -154,14 +169,22 @@ const ThreeJS: React.FC = React.memo(() => {
       rotation = randomFigure.rotation;
     }
 
+    let previousTime = 0;
     useFrame((state) => {
-      mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.1;
+      const elapsedTime = state.clock.getElapsedTime();
+
+      mesh.current.position.y = Math.sin(elapsedTime) * 0.1;
       mesh.current.rotation.y += rotation;
+
+      const deltaTime = elapsedTime - previousTime;
+      previousTime = elapsedTime;
       if (camera.current && mesh.current.position) {
-        camera.current.position.x = Math.sin(cursor.x * Math.PI * 2) * 0.5;
-        camera.current.position.z = Math.cos(cursor.x * Math.PI * 2) * 0.5;
-        camera.current.position.y = cursor.y * 2;
-        camera.current.lookAt(mesh.current.position);
+        const parallaxX = cursor.x * 0.5;
+        const parallaxY = -cursor.y * 0.5;
+        camera.current.position.x +=
+          (parallaxX - camera.current.position.x) * 5 * deltaTime;
+        camera.current.position.y +=
+          (parallaxY - camera.current.position.y) * 5 * deltaTime;
       }
     });
 
