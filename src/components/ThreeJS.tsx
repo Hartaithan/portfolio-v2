@@ -5,12 +5,43 @@ import { motion } from "framer-motion";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { canvasAnimation } from "../animations";
 
+const sizes = {
+  width: window.innerWidth,
+  height: window.innerHeight,
+};
+
+const cursor = {
+  x: 0,
+  y: 0,
+};
+
 const ThreeJS: React.FC = React.memo(() => {
+  window.addEventListener("mousemove", (event: MouseEvent) => {
+    if (window.innerWidth > 768) {
+      cursor.x = event.clientX / sizes.width - 0.5;
+      cursor.y = event.clientY / sizes.height - 0.5;
+    }
+  });
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener(
+      "deviceorientation",
+      (event: DeviceOrientationEvent) => {
+        if (window.innerWidth < 768 && event.gamma && event.beta) {
+          cursor.x = event.gamma * 0.03;
+          cursor.y = event.beta * 0.01;
+        }
+      },
+      true
+    );
+  }
+
   function getRandNum(max: number) {
     return Math.floor(Math.random() * max) + 1;
   }
 
   const Figure = () => {
+    const camera = React.useRef<THREE.Camera>();
     const font = useLoader(THREE.FontLoader, "/fonts/inter.json");
     const mesh = React.useRef<THREE.Mesh>(null!);
     const options = React.useMemo(
@@ -138,19 +169,41 @@ const ThreeJS: React.FC = React.memo(() => {
       rotation = randomFigure.rotation;
     }
 
+    let previousTime = 0;
     useFrame((state) => {
-      mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.1;
+      const elapsedTime = state.clock.getElapsedTime();
+
+      mesh.current.position.y = Math.sin(elapsedTime) * 0.1;
       mesh.current.rotation.y += rotation;
+
+      const deltaTime = elapsedTime - previousTime;
+      previousTime = elapsedTime;
+      if (camera.current && mesh.current.position) {
+        const parallaxX = cursor.x * 0.5;
+        const parallaxY = -cursor.y * 0.5;
+        camera.current.position.x +=
+          (parallaxX - camera.current.position.x) * 5 * deltaTime;
+        camera.current.position.y +=
+          (parallaxY - camera.current.position.y) * 5 * deltaTime;
+      }
     });
 
     return (
-      <mesh
-        position={[0, 0, 0]}
-        ref={mesh}
-        geometry={geometry}
-        material={material}
-        scale={scale}
-      />
+      <perspectiveCamera
+        ref={camera}
+        fov={60}
+        aspect={sizes.width / sizes.height}
+        near={0.1}
+        far={80}
+      >
+        <mesh
+          position={[0, 0, 0]}
+          ref={mesh}
+          geometry={geometry}
+          material={material}
+          scale={scale}
+        />
+      </perspectiveCamera>
     );
   };
 
