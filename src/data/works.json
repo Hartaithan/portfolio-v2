@@ -86,23 +86,5 @@
         "src": "https://rick-and-morty-five-ebon.vercel.app/"
       }
     ]
-  },
-  {
-    "id": 4,
-    "name": "¯〵_(ツ)_/¯",
-    "categ": "More coming soon",
-    "descr": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima asperiores quia rem officia sequi non error aliquam quae, cupiditate fugit, deleniti id molestias, adipisci ipsum accusamus reprehenderit sapiente perferendis architecto!",
-    "img": "https://media1.tenor.com/images/5dd27507782940e1a2eb4a2cfdf5fad5/tenor.gif?itemid=18638749",
-    "tags": ["MORE", "COMING", "SOON"],
-    "links": [
-      {
-        "svg": "github",
-        "src": "https://github.com/hartaithan"
-      },
-      {
-        "svg": "link",
-        "src": "https://hartaithan.github.io/"
-      }
-    ]
   }
 ]
