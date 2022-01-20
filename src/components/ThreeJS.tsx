@@ -42,7 +42,7 @@ const ThreeJS: React.FC = React.memo(() => {
 
   const Figure = () => {
     const camera = React.useRef<THREE.Camera>();
-    const font = useLoader(THREE.FontLoader, "/fonts/inter.json");
+    const font = useLoader(THREE.FontLoader, "/fonts/arial.json");
     const mesh = React.useRef<THREE.Mesh>(null!);
     const options = React.useMemo(
       () => ({
