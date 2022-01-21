@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/threejs.scss";
 import * as THREE from "three";
-import { motion } from "framer-motion";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { canvasAnimation } from "../animations";
 
 const sizes = {
   width: window.innerWidth,
@@ -250,16 +248,14 @@ const ThreeJS: React.FC = React.memo(() => {
 
   return (
     <React.Suspense fallback={null}>
-      <motion.div variants={canvasAnimation} initial="hidden" animate="visible">
-        <Canvas
-          className="threejs"
-          dpr={window.devicePixelRatio}
-          style={{ opacity: isLoaded ? "1" : "0" }}
-        >
-          <ambientLight />
-          <Figure />
-        </Canvas>
-      </motion.div>
+      <Canvas
+        className="threejs"
+        dpr={window.devicePixelRatio}
+        style={{ opacity: isLoaded ? "1" : "0" }}
+      >
+        <ambientLight />
+        <Figure />
+      </Canvas>
     </React.Suspense>
   );
 });
