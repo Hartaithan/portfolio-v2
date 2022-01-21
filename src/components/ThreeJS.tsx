@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/threejs.scss";
 import * as THREE from "three";
 import { motion } from "framer-motion";
@@ -16,6 +16,7 @@ const cursor = {
 };
 
 const ThreeJS: React.FC = React.memo(() => {
+  const [isLoaded, setLoaded] = React.useState(false);
   window.addEventListener("mousemove", (event: MouseEvent) => {
     if (window.innerWidth > 768) {
       cursor.x = event.clientX / sizes.width - 0.5;
@@ -64,6 +65,11 @@ const ThreeJS: React.FC = React.memo(() => {
       transparent: true,
       opacity: 0.3,
     });
+
+    useEffect(() => {
+      setLoaded(true);
+    }, [font]);
+
     const figures = [
       {
         id: 1,
@@ -245,7 +251,11 @@ const ThreeJS: React.FC = React.memo(() => {
   return (
     <React.Suspense fallback={null}>
       <motion.div variants={canvasAnimation} initial="hidden" animate="visible">
-        <Canvas className="threejs" dpr={window.devicePixelRatio}>
+        <Canvas
+          className="threejs"
+          dpr={window.devicePixelRatio}
+          style={{ opacity: isLoaded ? "1" : "0" }}
+        >
           <ambientLight />
           <Figure />
         </Canvas>
