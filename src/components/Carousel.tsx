@@ -90,7 +90,7 @@ const Carousel: React.FC = (): JSX.Element => {
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
             >
-              {items[page].id}. {items[page].name}
+              {`${items[page].id}. ${items[page].name}`}
             </div>
             <div
               className="works_main_container_category"

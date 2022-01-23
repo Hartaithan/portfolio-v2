@@ -152,6 +152,9 @@
           }
         }
       }
+      &.withTags {
+        padding: 10px;
+      }
     }
     #aboutme {
       .about_element_title {
@@ -170,11 +173,5 @@
     overflow: auto;
     max-height: 80%;
     width: 90%;
-    align-content: flex-start;
-    &_element {
-      &.withTags {
-        padding: 15px;
-      }
-    }
   }
 }
