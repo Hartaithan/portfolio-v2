@@ -183,9 +183,9 @@ const ThreeJS: React.FC = React.memo(() => {
       },
       {
         id: 17,
-        name: "5051",
-        geometry: new THREE.TextGeometry("5051", options).center(),
-        scale: 0.5,
+        name: "┼",
+        geometry: new THREE.TextGeometry("┼", options).center(),
+        scale: 1,
         rotation: 0.01,
       },
       {
@@ -193,6 +193,20 @@ const ThreeJS: React.FC = React.memo(() => {
         name: "☺",
         geometry: new THREE.TextGeometry("☺", options).center(),
         scale: 1.5,
+        rotation: 0.01,
+      },
+      {
+        id: 19,
+        name: "☼",
+        geometry: new THREE.TextGeometry("☼", options).center(),
+        scale: 1.1,
+        rotation: 0.01,
+      },
+      {
+        id: 20,
+        name: "░",
+        geometry: new THREE.TextGeometry("░", options).center(),
+        scale: 1.1,
         rotation: 0.01,
       },
     ];
