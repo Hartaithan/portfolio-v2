@@ -3,7 +3,7 @@ import "../styles/navigation.scss";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation: React.FC = () => {
-  const loc = useLocation();
+  const { pathname } = useLocation();
   const links = [
     {
       id: 1,
@@ -36,9 +36,7 @@ const Navigation: React.FC = () => {
       {links.map((link) => (
         <Link
           className={
-            loc.pathname === link.pathname
-              ? `nav_links nav_active`
-              : "nav_links"
+            pathname === link.pathname ? `nav_links nav_active` : "nav_links"
           }
           key={link.selector}
           id={link.selector}
