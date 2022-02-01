@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sliderAnimation } from "../../animations";
 import items from "../../data/works.json";
-import DynamicIcon from "../../svg";
+import DynamicIcon from "../DynamicIcon/DynamicIcon";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {

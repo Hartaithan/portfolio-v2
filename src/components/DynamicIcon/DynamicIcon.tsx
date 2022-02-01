@@ -1,6 +1,4 @@
-interface IDynamicIcon {
-  svg: string;
-}
+import { IDynamicIcon } from "../../models/DynamiciconModel";
 
 const DynamicIcon: React.FC<IDynamicIcon> = ({ svg }) => {
   switch (svg) {
