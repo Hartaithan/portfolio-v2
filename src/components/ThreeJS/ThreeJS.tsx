@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/threejs.scss";
+import "./threejs.scss";
 import { Canvas } from "@react-three/fiber";
-import Figure from "./Figure";
-import { ICursor, ISizes } from "../models/FigureModel";
+import Figure from "../Figure/Figure";
+import { ICursor, ISizes } from "../../models/FigureModel";
 
 const sizes: ISizes = {
   width: window.innerWidth,

@@ -2,13 +2,13 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import Navigation from "./components/Navigation";
-import ThreeJS from "./components/ThreeJS";
+import Navigation from "./components/Navigation/Navigation";
+import ThreeJS from "./components/ThreeJS/ThreeJS";
 
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import HomePage from "./pages/HomePage";
-import WorksPage from "./pages/WorksPage";
+import AboutPage from "./pages/About/About";
+import ContactPage from "./pages/Contact/Contact";
+import HomePage from "./pages/Home/Home";
+import WorksPage from "./pages/Works/Works";
 
 const App: React.FC = () => {
   return (

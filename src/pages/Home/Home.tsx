@@ -1,15 +1,15 @@
 import React from "react";
-import "../styles/homePage.scss";
+import "./home.scss";
 import { motion } from "framer-motion";
 import {
   buttonsAnimation,
   textAnimation,
   containerAnimation,
-} from "../animations";
+} from "../../animations";
 import { Link } from "react-router-dom";
-import useTitle from "../hooks/useTitle";
+import useTitle from "../../hooks/useTitle";
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   useTitle("Home");
 
   return (
@@ -78,4 +78,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;

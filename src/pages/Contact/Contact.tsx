@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/contactPage.scss";
+import "./contact.scss";
 import { motion } from "framer-motion";
-import { containerAnimation } from "../animations";
-import useTitle from "../hooks/useTitle";
+import { containerAnimation } from "../../animations";
+import useTitle from "../../hooks/useTitle";
 
-const ContactPage: React.FC = () => {
+const Contact: React.FC = () => {
   useTitle("Contact");
 
   return (
@@ -51,4 +51,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage;
+export default Contact;

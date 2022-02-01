@@ -1,7 +1,7 @@
 import React from "react";
 import * as THREE from "three";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { IFigure } from "../models/FigureModel";
+import { IFigure } from "../../models/FigureModel";
 
 function getRandNum(max: number) {
   return Math.floor(Math.random() * max) + 1;

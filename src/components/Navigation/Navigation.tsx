@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/navigation.scss";
+import "./navigation.scss";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation: React.FC = () => {

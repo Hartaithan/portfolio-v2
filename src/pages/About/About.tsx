@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/aboutPage.scss";
+import "./about.scss";
 import { motion } from "framer-motion";
-import { containerAnimation } from "../animations";
-import items from "../data/about.json";
-import useTitle from "../hooks/useTitle";
+import { containerAnimation } from "../../animations";
+import items from "../../data/about.json";
+import useTitle from "../../hooks/useTitle";
 
-const AboutPage: React.FC = () => {
+const About: React.FC = () => {
   useTitle("About");
 
   return (
@@ -45,4 +45,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default About;

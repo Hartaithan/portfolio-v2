@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/worksPage.scss";
+import "./works.scss";
 import { motion } from "framer-motion";
-import { containerAnimation } from "../animations";
-import Carousel from "../components/Carousel";
-import useTitle from "../hooks/useTitle";
+import { containerAnimation } from "../../animations";
+import Carousel from "../../components/Carousel/Carousel";
+import useTitle from "../../hooks/useTitle";
 
-const WorksPage: React.FC = () => {
+const Works: React.FC = () => {
   useTitle("Works");
 
   return (
@@ -21,4 +21,4 @@ const WorksPage: React.FC = () => {
   );
 };
 
-export default WorksPage;
+export default Works;
