@@ -46,7 +46,7 @@
       &_descr {
         font-size: 18px;
         text-align: end;
-        background: rgba($color-grey, 0.8);
+        background: rgba($c-grey, 0.8);
         padding: $about_el_pad;
         border-radius: $about_el_bord_rad;
       }
@@ -132,7 +132,7 @@
     &_item {
       height: 15px;
       width: 15px;
-      background: $color-grey;
+      background: $c-grey;
       border-radius: 50%;
       cursor: pointer;
       &:not(:last-child) {
