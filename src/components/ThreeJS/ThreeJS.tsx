@@ -16,25 +16,34 @@ const cursor: ICursor = {
 
 const ThreeJS: React.FC = React.memo(() => {
   const [isLoaded, setLoaded] = React.useState(false);
-  window.addEventListener("mousemove", (event: MouseEvent) => {
-    if (window.innerWidth > 768) {
-      cursor.x = event.clientX / sizes.width - 0.5;
-      cursor.y = event.clientY / sizes.height - 0.5;
-    }
-  });
 
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener(
-      "deviceorientation",
-      (event: DeviceOrientationEvent) => {
-        if (window.innerWidth < 768 && event.gamma && event.beta) {
-          cursor.x = event.gamma * 0.03;
-          cursor.y = event.beta * 0.01;
-        }
-      },
-      true
-    );
-  }
+  const handleMouseMove = React.useCallback((event: MouseEvent) => {
+    cursor.x = event.clientX / sizes.width - 0.5;
+    cursor.y = event.clientY / sizes.height - 0.5;
+  }, []);
+
+  const handleOrientation = React.useCallback(
+    (event: DeviceOrientationEvent) => {
+      if (event.gamma && event.beta) {
+        cursor.x = event.gamma * 0.03;
+        cursor.y = event.beta * 0.01;
+      }
+    },
+    []
+  );
+
+  React.useEffect(() => {
+    if (window.innerWidth > 768) {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
+    if (window.innerWidth < 768) {
+      window.addEventListener("deviceorientation", handleOrientation, true);
+    }
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("deviceorientation", handleOrientation);
+    };
+  }, [handleMouseMove, handleOrientation]);
 
   return (
     <React.Suspense fallback={null}>
