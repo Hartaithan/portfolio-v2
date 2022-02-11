@@ -69,7 +69,6 @@ const Home: React.FC = () => {
           animate="animate"
           transition={{ duration: 0.5, delay: 1 }}
         >
-          {/* <a href="./data/resume.pdf" target="_blank" rel="noreferrer"> */}
           <button
             className="home__buttons__button"
             id="resume"
@@ -77,7 +76,6 @@ const Home: React.FC = () => {
           >
             Open Resume
           </button>
-          {/* </a> */}
         </motion.div>
       </div>
       <AnimatePresence exitBeforeEnter initial={false}>
