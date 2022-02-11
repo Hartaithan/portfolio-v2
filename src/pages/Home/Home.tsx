@@ -12,7 +12,20 @@ import Modal from "../../components/Modal/Modal";
 
 const Home: React.FC = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   useTitle("Home");
+
+  function handleResume() {
+    if (isMobile) {
+      const link = document.createElement("a");
+      link.href = "./data/resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode?.removeChild(link);
+    } else {
+      setModalOpen(!modalOpen);
+    }
+  }
 
   return (
     <motion.div
@@ -72,9 +85,9 @@ const Home: React.FC = () => {
           <button
             className="home__buttons__button"
             id="resume"
-            onClick={() => setModalOpen(!modalOpen)}
+            onClick={() => handleResume()}
           >
-            Open Resume
+            {isMobile ? "Get Resume" : "Open Resume"}
           </button>
         </motion.div>
       </div>
