@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   buttonsAnimation,
   textAnimation,
@@ -8,8 +8,10 @@ import {
 } from "../../animations";
 import { Link } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
+import Modal from "../../components/Modal/Modal";
 
 const Home: React.FC = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
   useTitle("Home");
 
   return (
@@ -67,13 +69,20 @@ const Home: React.FC = () => {
           animate="animate"
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <a href="./data/resume.pdf" target="_blank" rel="noreferrer">
-            <button className="home_buttons_button" id="resume">
-              Get Resume
-            </button>
-          </a>
+          {/* <a href="./data/resume.pdf" target="_blank" rel="noreferrer"> */}
+          <button
+            className="home_buttons_button"
+            id="resume"
+            onClick={() => setModalOpen(!modalOpen)}
+          >
+            Get Resume
+          </button>
+          {/* </a> */}
         </motion.div>
       </div>
+      <AnimatePresence exitBeforeEnter initial={false}>
+        {modalOpen && <Modal setModalOpen={setModalOpen}></Modal>}
+      </AnimatePresence>
     </motion.div>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import * as THREE from "three";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { IFigure } from "../../models/FigureModel";
+import { IFigureProps } from "../../models/FigureModel";
 
 function getRandNum(max: number) {
   return Math.floor(Math.random() * max) + 1;
 }
 
-const Figure: React.FC<IFigure> = (props) => {
+const Figure: React.FC<IFigureProps> = (props) => {
   const { sizes, cursor, setLoaded } = props;
   const camera = React.useRef<THREE.Camera>();
   const font = useLoader(THREE.FontLoader, "/fonts/arial.json");

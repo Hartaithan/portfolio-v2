@@ -1,4 +1,4 @@
-export interface IFigure {
+export interface IFigureProps {
   sizes: ISizes;
   cursor: ICursor;
   setLoaded: React.Dispatch<React.SetStateAction<boolean>>;
