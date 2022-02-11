@@ -34,3 +34,30 @@
     }
   }
 }
+
+@media (min-width: 1921px) {
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  .modal {
+    padding: 12px;
+    &__download {
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
