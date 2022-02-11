@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       animate="visible"
       exit="exit"
     >
-      <div className="home_text">
+      <div className="home__text">
         <motion.p
           variants={textAnimation}
           initial="initial"
@@ -48,22 +48,22 @@ const Home: React.FC = () => {
           Frontend Developer
         </motion.p>
       </div>
-      <div className="home_buttons">
+      <div className="home__buttons">
         <motion.div
-          className="home_buttons_wrapper"
+          className="home__buttons__wrapper"
           variants={buttonsAnimation}
           initial="initial"
           animate="animate"
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <Link to={"/works"}>
-            <button className="home_buttons_button" id="works">
+            <button className="home__buttons__button" id="works">
               My Works
             </button>
           </Link>
         </motion.div>
         <motion.div
-          className="home_buttons_wrapper"
+          className="home__buttons__wrapper"
           variants={buttonsAnimation}
           initial="initial"
           animate="animate"
@@ -71,11 +71,11 @@ const Home: React.FC = () => {
         >
           {/* <a href="./data/resume.pdf" target="_blank" rel="noreferrer"> */}
           <button
-            className="home_buttons_button"
+            className="home__buttons__button"
             id="resume"
             onClick={() => setModalOpen(!modalOpen)}
           >
-            Get Resume
+            Open Resume
           </button>
           {/* </a> */}
         </motion.div>

@@ -9,7 +9,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-content: center;
   justify-items: center;
-  &_icon {
+  &__icon {
     height: 150px;
     width: 150px;
     background: $c-grey;
@@ -87,7 +87,7 @@
     grid-template-columns: 45% 45%;
     grid-template-rows: fit-content fit-content;
     gap: 30px;
-    &_icon {
+    &__icon {
       height: 190px;
       width: 190px;
       &:before {
@@ -103,7 +103,7 @@
 @media (max-width: 576px) {
   .contact {
     width: 90%;
-    &_icon {
+    &__icon {
       height: 100px;
       width: 100px;
     }

@@ -19,18 +19,18 @@ const About: React.FC = () => {
       {items.map((item) => {
         if (!item.containsTags) {
           return (
-            <div className="about_element" id={item.id} key={item.id}>
-              <div className="about_element_title">
+            <div className="about__element" id={item.id} key={item.id}>
+              <div className="about__element__title">
                 <span>{item.title}</span>
               </div>
-              <div className="about_element_content">{item.content}</div>
+              <div className="about__element__content">{item.content}</div>
             </div>
           );
         } else {
           return (
-            <div className="about_element withTags" id={item.id} key={item.id}>
-              <div className="about_element_title">{item.title}</div>
-              <div className="about_element_content">
+            <div className="about__element withTags" id={item.id} key={item.id}>
+              <div className="about__element__title">{item.title}</div>
+              <div className="about__element__content">
                 <ul>
                   {item.tags.map((tag) => {
                     return <li key={tag}>{tag}</li>;

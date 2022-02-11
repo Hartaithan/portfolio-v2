@@ -36,7 +36,7 @@ const Navigation: React.FC = () => {
       {links.map((link) => (
         <Link
           className={
-            pathname === link.pathname ? `nav_links nav_active` : "nav_links"
+            pathname === link.pathname ? `nav__links nav__active` : "nav__links"
           }
           key={link.selector}
           id={link.selector}

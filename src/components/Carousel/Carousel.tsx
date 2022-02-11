@@ -57,7 +57,7 @@ const Carousel: React.FC = (): JSX.Element => {
     <>
       <AnimatePresence exitBeforeEnter initial={false} custom={dir}>
         <motion.div
-          className="works_main"
+          className="works__main"
           key={items[page].name}
           custom={dir}
           variants={sliderAnimation}
@@ -81,11 +81,11 @@ const Carousel: React.FC = (): JSX.Element => {
           }}
         >
           <div
-            className="works_main_container"
+            className="works__main__container"
             style={{ alignSelf: pos === false ? "flex-start" : "flex-end" }}
           >
             <div
-              className="works_main_container_title"
+              className="works__main__container__title"
               style={{
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
@@ -93,7 +93,7 @@ const Carousel: React.FC = (): JSX.Element => {
               {`${items[page].id}. ${items[page].name}`}
             </div>
             <div
-              className="works_main_container_category"
+              className="works__main__container__category"
               style={{
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
@@ -101,12 +101,12 @@ const Carousel: React.FC = (): JSX.Element => {
               {items[page].categ}
             </div>
             <div
-              className="works_main_container_descr"
+              className="works__main__container__descr"
               style={{ textAlign: pos === false ? "start" : "end" }}
             >
               {items[page].descr}
             </div>
-            <div className="works_main_container_tags">
+            <div className="works__main__container__tags">
               <ul
                 style={{
                   justifyContent: pos === false ? "flex-start" : "flex-end",
@@ -118,7 +118,7 @@ const Carousel: React.FC = (): JSX.Element => {
               </ul>
             </div>
             <div
-              className="works_main_container_links"
+              className="works__main__container__links"
               style={{
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
@@ -138,20 +138,20 @@ const Carousel: React.FC = (): JSX.Element => {
             </div>
           </div>
           <div
-            className="works_main_img"
+            className="works__main__img"
             style={{ alignSelf: pos === false ? "flex-end" : "flex-start" }}
           >
             <img
               src={items[page].img}
               draggable="false"
-              alt="works_main_img"
+              alt="works main img"
             ></img>
           </div>
         </motion.div>
       </AnimatePresence>
-      <div className="works_arrows">
+      <div className="works__arrows">
         <svg
-          className="works_arrows_left"
+          className="works__arrows__left"
           onClick={() => changePage(-1)}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ const Carousel: React.FC = (): JSX.Element => {
           <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
         </svg>
         <svg
-          className="works_arrows_right"
+          className="works__arrows__right"
           onClick={() => changePage(+1)}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -167,11 +167,11 @@ const Carousel: React.FC = (): JSX.Element => {
           <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
         </svg>
       </div>
-      <div className="works_pages">
+      <div className="works__pages">
         {items.map((item, index) => {
           return (
             <div
-              className="works_pages_item"
+              className="works__pages__item"
               id={`page${index}`}
               key={item.name}
               style={{ background: page === index ? "white" : "#1b1b1b" }}

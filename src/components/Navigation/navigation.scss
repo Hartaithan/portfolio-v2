@@ -2,7 +2,7 @@
 @import "../../styles/colors";
 
 .nav {
-  &_links {
+  &__links {
     position: absolute;
     z-index: 1000;
     text-decoration: none;
@@ -32,7 +32,7 @@
       }
     }
   }
-  &_active {
+  &__active {
     pointer-events: none;
     &:before {
       content: "";
@@ -68,7 +68,7 @@
 
 @media (max-width: 1400px) {
   .nav {
-    &_links {
+    &__links {
       font-size: 20px;
     }
   }
@@ -79,7 +79,7 @@
 
 @media (max-width: 992px) {
   .nav {
-    &_links {
+    &__links {
       font-size: 18px;
     }
   }
@@ -108,7 +108,7 @@
 
 @media (max-width: 576px) {
   .nav {
-    &_links {
+    &__links {
       font-size: 16px;
     }
   }

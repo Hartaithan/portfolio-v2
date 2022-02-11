@@ -13,7 +13,7 @@
   grid-template-areas:
     "ABOUT ABOUT ABOUT"
     "EL1 EL2 EL3";
-  &_element {
+  &__element {
     display: flex;
     flex-direction: column;
     background: rgba($c-grey, 0.8);
@@ -22,7 +22,7 @@
     &.withTags {
       padding: 20px 10px;
     }
-    &_title {
+    &__title {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -33,7 +33,7 @@
         height: fit-content;
       }
     }
-    &_content {
+    &__content {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -68,10 +68,10 @@
   }
   #aboutme {
     grid-area: ABOUT;
-    .about_element_title {
+    .about__element__title {
       justify-content: flex-start;
     }
-    .about_element_content {
+    .about__element__content {
       font-size: 18px;
       justify-content: flex-start;
     }
@@ -93,11 +93,11 @@
 @media (max-width: 1400px) {
   .about {
     width: 70%;
-    &_element {
-      &_title {
+    &__element {
+      &__title {
         font-size: 24px;
       }
-      &_content {
+      &__content {
         ul {
           li {
             font-size: 14px;
@@ -134,13 +134,13 @@
 @media (max-width: 576px) {
   .about {
     width: 80%;
-    &_element {
+    &__element {
       padding: $about_el_pad_mobile;
-      &_title {
+      &__title {
         height: fit-content;
         font-size: 18px;
       }
-      &_content {
+      &__content {
         height: fit-content;
         ul {
           li {
@@ -157,10 +157,10 @@
       }
     }
     #aboutme {
-      .about_element_title {
+      .about__element__title {
         justify-content: center;
       }
-      .about_element_content {
+      .about__element__content {
         justify-content: center;
         font-size: 14px;
       }
