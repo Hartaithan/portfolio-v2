@@ -1,5 +1,4 @@
-import { IDynamicIcon } from "./models/DynamicIconModel";
-import { IIconsProps } from "./models/IconsModel";
+import { IIconsProps, IDynamicIconProps } from "./models/IconsModel";
 
 export const IconArrowLeft = (props: IIconsProps) => {
   return (
@@ -70,7 +69,7 @@ export const IconInstagram = (props: IIconsProps) => {
   );
 };
 
-export const DynamicIcon: React.FC<IDynamicIcon> = ({ svg }) => {
+export const DynamicIcon: React.FC<IDynamicIconProps> = ({ svg }) => {
   switch (svg) {
     case "playmarket":
       return <IconPlaymarket />;
