@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sliderAnimation } from "../../animations";
 import items from "../../data/works.json";
-import DynamicIcon from "../DynamicIcon/DynamicIcon";
+import { DynamicIcon, IconArrowLeft, IconArrowRight } from "../../icons";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
@@ -150,22 +150,14 @@ const Carousel: React.FC = (): JSX.Element => {
         </motion.div>
       </AnimatePresence>
       <div className="works__arrows">
-        <svg
+        <IconArrowLeft
           className="works__arrows__left"
           onClick={() => changePage(-1)}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-        >
-          <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-        </svg>
-        <svg
+        />
+        <IconArrowRight
           className="works__arrows__right"
           onClick={() => changePage(+1)}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-        >
-          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-        </svg>
+        />
       </div>
       <div className="works__pages">
         {items.map((item, index) => {
