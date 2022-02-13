@@ -15,6 +15,7 @@ const cursor: ICursor = {
 };
 
 const ThreeJS: React.FC = React.memo(() => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const [isLoaded, setLoaded] = React.useState(false);
 
   const handleMouseMove = React.useCallback((event: MouseEvent) => {
@@ -33,17 +34,17 @@ const ThreeJS: React.FC = React.memo(() => {
   );
 
   React.useEffect(() => {
-    if (window.innerWidth > 768) {
+    if (!isMobile) {
       window.addEventListener("mousemove", handleMouseMove);
     }
-    if (window.innerWidth < 768) {
+    if (isMobile) {
       window.addEventListener("deviceorientation", handleOrientation, true);
     }
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("deviceorientation", handleOrientation);
     };
-  }, [handleMouseMove, handleOrientation]);
+  }, [handleMouseMove, handleOrientation]); // eslint-disable-line
 
   return (
     <React.Suspense fallback={null}>
