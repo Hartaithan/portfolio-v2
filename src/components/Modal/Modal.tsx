@@ -11,8 +11,8 @@ const Modal: React.FC<IModalProps> = (props) => {
 
   function downloadResume() {
     const link = document.createElement("a");
-    link.href = "./data/resume.pdf";
-    link.setAttribute("download", `resume.pdf`);
+    link.href = "./data/resume-frontend-stepanov-vladimir.pdf";
+    link.setAttribute("download", `resume-frontend-stepanov-vladimir.pdf`);
     document.body.appendChild(link);
     link.click();
     link.parentNode?.removeChild(link);
@@ -34,7 +34,7 @@ const Modal: React.FC<IModalProps> = (props) => {
         <iframe
           className="modal__resume"
           title="resume"
-          src={`./data/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&scrolling=0&view=fitH`}
+          src={`./data/resume-frontend-stepanov-vladimir.pdf#toolbar=0&navpanes=0&scrollbar=0&scrolling=0&view=fitH`}
           frameBorder="0"
           scrolling="no"
         />
