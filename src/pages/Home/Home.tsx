@@ -18,7 +18,7 @@ const Home: React.FC = () => {
   function handleResume() {
     if (isMobile) {
       const link = document.createElement("a");
-      link.href = "./data/resume.pdf";
+      link.href = "./data/resume-frontend-stepanov-vladimir.pdf";
       document.body.appendChild(link);
       link.click();
       link.parentNode?.removeChild(link);

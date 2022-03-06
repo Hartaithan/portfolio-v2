@@ -9,6 +9,19 @@
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
+    &.active {
+      pointer-events: none;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 93%;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        opacity: 1;
+        background: white;
+      }
+    }
     &:before {
       content: "";
       position: absolute;
@@ -30,19 +43,6 @@
         left: 0;
         opacity: 1;
       }
-    }
-  }
-  &__active {
-    pointer-events: none;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 93%;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      opacity: 1;
-      background: white;
     }
   }
   #home {

@@ -1,9 +1,8 @@
 import React from "react";
 import "./navigation.scss";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation: React.FC = () => {
-  const { pathname } = useLocation();
   const links = [
     {
       id: 1,
@@ -34,16 +33,16 @@ const Navigation: React.FC = () => {
   return (
     <div className="nav">
       {links.map((link) => (
-        <Link
-          className={
-            pathname === link.pathname ? `nav__links nav__active` : "nav__links"
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? "nav__links active" : "nav__links"
           }
           key={link.selector}
           id={link.selector}
           to={link.pathname}
         >
           {link.name}
-        </Link>
+        </NavLink>
       ))}
     </div>
   );
