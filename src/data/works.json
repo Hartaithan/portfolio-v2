@@ -20,7 +20,7 @@
   {
     "id": 2,
     "name": "Camo Tracker",
-    "categ": "Web App | React",
+    "categ": "Web App | React | Express",
     "descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Heroku",
     "img": "./img/works/camo-tracker.png",
     "tags": [
@@ -46,7 +46,7 @@
   {
     "id": 3,
     "name": "Whiteboard",
-    "categ": "Web App | React",
+    "categ": "Web App | React | Express",
     "descr": "A test project for learn websockets. A simple collaborative whiteboard for planning something together or just drawing with a friend. Work in progress...",
     "img": "./img/works/whiteboard.png",
     "tags": [
@@ -84,6 +84,24 @@
       {
         "svg": "link",
         "src": "https://rick-and-morty-five-ebon.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Image Editor",
+    "categ": "Web App | Vue",
+    "descr": "The web analog of the Snipping Tool app. The user can upload an image using a file or from the clipboard and mark some important detail on the image. The edited image can be saved or copied to the clipboard.",
+    "img": "./img/works/image-editor.png",
+    "tags": ["VUE", "VUEX", "TYPESCRIPT", "HTML5 CANVAS", "VERCEL"],
+    "links": [
+      {
+        "svg": "github",
+        "src": "https://github.com/Hartaithan/image-editor"
+      },
+      {
+        "svg": "link",
+        "src": "https://image-editor-hartaithan.vercel.app/"
       }
     ]
   }

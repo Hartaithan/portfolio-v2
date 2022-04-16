@@ -21,6 +21,7 @@
       "TS 4+",
       "REACT",
       "REDUX",
+      "MOBX",
       "NEXT.JS",
       "SSR"
     ]
@@ -35,7 +36,8 @@
       "MONGO DB",
       "EXPRESS.JS",
       "NPM | YARN",
-      "AUTHENTICATION"
+      "AUTHENTICATION",
+      "WEBSOCKETS"
     ]
   },
   {
