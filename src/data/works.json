@@ -75,7 +75,7 @@
     "categ": "Web App | React",
     "descr": "A test project for typescript practice. The user can view information about a character, search by character name, type, species, and filter by status and gender. Hosted on Vercel",
     "img": "./img/works/rickandmorty.png",
-    "tags": ["REACT", "AXIOS", "TYPESCRIPT", "BOOTSTRAP", "VERCEL"],
+    "tags": ["REACT", "AXIOS", "TYPESCRIPT", "BOOTSTRAP", "VERCEL", "MOBX"],
     "links": [
       {
         "svg": "github",
