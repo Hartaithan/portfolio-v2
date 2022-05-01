@@ -1,7 +1,10 @@
 import React from "react";
 import * as THREE from "three";
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { IFigureProps } from "../../models/FigureModel";
+import { PerspectiveCamera } from "three";
 
 function getRandNum(max: number) {
   return Math.floor(Math.random() * max) + 1;
@@ -9,8 +12,8 @@ function getRandNum(max: number) {
 
 const Figure: React.FC<IFigureProps> = (props) => {
   const { sizes, cursor, setLoaded } = props;
-  const camera = React.useRef<THREE.Camera>();
-  const font = useLoader(THREE.FontLoader, "/fonts/arial.json");
+  const camera = React.useRef<PerspectiveCamera | null>(null);
+  const font = useLoader(FontLoader, "/fonts/arial.json");
   const mesh = React.useRef<THREE.Mesh>(null!);
   const options = React.useMemo(
     () => ({
@@ -90,91 +93,91 @@ const Figure: React.FC<IFigureProps> = (props) => {
     {
       id: 8,
       name: ":D",
-      geometry: new THREE.TextGeometry(":D", options).center(),
+      geometry: new TextGeometry(":D", options).center(),
       scale: 1.2,
       rotation: 0.01,
     },
     {
       id: 9,
       name: "(•_•)",
-      geometry: new THREE.TextGeometry("(•_•)", options).center(),
+      geometry: new TextGeometry("(•_•)", options).center(),
       scale: 0.55,
       rotation: 0.01,
     },
     {
       id: 10,
       name: "D:",
-      geometry: new THREE.TextGeometry("D:", options).center(),
+      geometry: new TextGeometry("D:", options).center(),
       scale: 1.2,
       rotation: 0.01,
     },
     {
       id: 11,
       name: "H",
-      geometry: new THREE.TextGeometry("H", options).center(),
+      geometry: new TextGeometry("H", options).center(),
       scale: 1.5,
       rotation: 0.01,
     },
     {
       id: 12,
       name: "( ͡° ͜ʖ ͡°)",
-      geometry: new THREE.TextGeometry("( ͡° ͜ʖ ͡°)", options).center(),
+      geometry: new TextGeometry("( ͡° ͜ʖ ͡°)", options).center(),
       scale: 0.4,
       rotation: 0.01,
     },
     {
       id: 13,
       name: "if",
-      geometry: new THREE.TextGeometry("if", options).center(),
+      geometry: new TextGeometry("if", options).center(),
       scale: 1.3,
       rotation: 0.01,
     },
     {
       id: 14,
       name: "ʕ•ᴥ•ʔ",
-      geometry: new THREE.TextGeometry("ʕ•ᴥ•ʔ", options).center(),
+      geometry: new TextGeometry("ʕ•ᴥ•ʔ", options).center(),
       scale: 0.5,
       rotation: 0.01,
     },
     {
       id: 15,
       name: "( ͠° ͟ل ͡°)",
-      geometry: new THREE.TextGeometry("( ͠° ͟ل ͡°)", options).center(),
+      geometry: new TextGeometry("( ͠° ͟ل ͡°)", options).center(),
       scale: 0.4,
       rotation: 0.01,
     },
     {
       id: 16,
       name: "else",
-      geometry: new THREE.TextGeometry("else", options).center(),
+      geometry: new TextGeometry("else", options).center(),
       scale: 0.6,
       rotation: 0.01,
     },
     {
       id: 17,
       name: "┼",
-      geometry: new THREE.TextGeometry("┼", options).center(),
+      geometry: new TextGeometry("┼", options).center(),
       scale: 1,
       rotation: 0.01,
     },
     {
       id: 18,
       name: "☺",
-      geometry: new THREE.TextGeometry("☺", options).center(),
+      geometry: new TextGeometry("☺", options).center(),
       scale: 1.5,
       rotation: 0.01,
     },
     {
       id: 19,
       name: "☼",
-      geometry: new THREE.TextGeometry("☼", options).center(),
+      geometry: new TextGeometry("☼", options).center(),
       scale: 1.1,
       rotation: 0.01,
     },
     {
       id: 20,
       name: "░",
-      geometry: new THREE.TextGeometry("░", options).center(),
+      geometry: new TextGeometry("░", options).center(),
       scale: 1.1,
       rotation: 0.01,
     },
