@@ -6,14 +6,14 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { IFigureProps } from "../../models/FigureModel";
 import { PerspectiveCamera } from "three";
 
-function getRandNum(max: number) {
-  return Math.floor(Math.random() * max) + 1;
-}
-
 const Figure: React.FC<IFigureProps> = (props) => {
   const { sizes, cursor, setLoaded } = props;
   const camera = React.useRef<PerspectiveCamera | null>(null);
-  const font = useLoader(FontLoader, "/fonts/arial.json");
+  const font = useLoader(FontLoader, "/fonts/arial.json", () => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 100);
+  });
   const mesh = React.useRef<THREE.Mesh>(null!);
   const options = React.useMemo(
     () => ({
@@ -35,10 +35,9 @@ const Figure: React.FC<IFigureProps> = (props) => {
     transparent: true,
     opacity: 0.3,
   });
-
-  React.useEffect(() => {
-    setLoaded(true);
-  }, [font]); // eslint-disable-line
+  const getRandNum = React.useCallback((max: number) => {
+    return Math.floor(Math.random() * max) + 1;
+  }, []);
 
   const figures = [
     {
@@ -221,13 +220,15 @@ const Figure: React.FC<IFigureProps> = (props) => {
       near={0.1}
       far={80}
     >
-      <mesh
-        position={[0, 0, 0]}
-        ref={mesh}
-        geometry={geometry}
-        material={material}
-        scale={scale}
-      />
+      {font && (
+        <mesh
+          position={[0, 0, 0]}
+          ref={mesh}
+          geometry={geometry}
+          material={material}
+          scale={scale}
+        />
+      )}
     </perspectiveCamera>
   );
 };

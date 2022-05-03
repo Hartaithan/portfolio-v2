@@ -14,9 +14,10 @@ const cursor: ICursor = {
   y: 0,
 };
 
-const ThreeJS: React.FC = React.memo(() => {
+const ThreeJS: React.FC = () => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const [isLoaded, setLoaded] = React.useState(false);
+  const MemoizedFigure = React.memo(Figure);
 
   const handleMouseMove = React.useCallback((event: MouseEvent) => {
     cursor.x = event.clientX / sizes.width - 0.5;
@@ -50,14 +51,17 @@ const ThreeJS: React.FC = React.memo(() => {
     <React.Suspense fallback={null}>
       <Canvas
         className="threejs"
+        style={{
+          opacity: isLoaded ? "1" : "0",
+          transition: "all 1s ease-in-out",
+        }}
         dpr={window.devicePixelRatio}
-        style={{ opacity: isLoaded ? "1" : "0" }}
       >
         <ambientLight />
-        <Figure sizes={sizes} cursor={cursor} setLoaded={setLoaded} />
+        <MemoizedFigure sizes={sizes} cursor={cursor} setLoaded={setLoaded} />
       </Canvas>
     </React.Suspense>
   );
-});
+};
 
 export default ThreeJS;
