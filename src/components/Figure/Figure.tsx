@@ -7,14 +7,16 @@ import { IFigureProps } from "../../models/FigureModel";
 import { PerspectiveCamera } from "three";
 
 const Figure: React.FC<IFigureProps> = (props) => {
-  const { sizes, cursor, setLoaded } = props;
+  const { sizes, cursor } = props;
   const camera = React.useRef<PerspectiveCamera | null>(null);
-  const font = useLoader(FontLoader, "/fonts/arial.json", () => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 100);
-  });
+  const font = useLoader(FontLoader, "/fonts/arial.json");
   const mesh = React.useRef<THREE.Mesh>(null!);
+  const material = new THREE.MeshStandardMaterial({
+    color: "white",
+    wireframe: true,
+    transparent: true,
+    opacity: 0,
+  });
   const options = React.useMemo(
     () => ({
       font: font,
@@ -29,12 +31,6 @@ const Figure: React.FC<IFigureProps> = (props) => {
     }),
     [font]
   );
-  const material = new THREE.MeshStandardMaterial({
-    color: "white",
-    wireframe: true,
-    transparent: true,
-    opacity: 0.3,
-  });
   const getRandNum = React.useCallback((max: number) => {
     return Math.floor(Math.random() * max) + 1;
   }, []);
@@ -197,6 +193,10 @@ const Figure: React.FC<IFigureProps> = (props) => {
   useFrame((state) => {
     const elapsedTime = state.clock.getElapsedTime();
 
+    if (material.opacity < 0.3) {
+      material.opacity = material.opacity + Math.sin(elapsedTime) * 0.01;
+    }
+
     mesh.current.position.y = Math.sin(elapsedTime) * 0.1;
     mesh.current.rotation.y += rotation;
 
@@ -220,15 +220,13 @@ const Figure: React.FC<IFigureProps> = (props) => {
       near={0.1}
       far={80}
     >
-      {font && (
-        <mesh
-          position={[0, 0, 0]}
-          ref={mesh}
-          geometry={geometry}
-          material={material}
-          scale={scale}
-        />
-      )}
+      <mesh
+        position={[0, 0, 0]}
+        ref={mesh}
+        geometry={geometry}
+        material={material}
+        scale={scale}
+      />
     </perspectiveCamera>
   );
 };
