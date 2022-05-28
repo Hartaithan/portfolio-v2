@@ -91,7 +91,7 @@
     "id": 5,
     "name": "Image Editor",
     "categ": "Web App | Vue",
-    "descr": "The web analog of the Snipping Tool app. The user can upload an image using a file or from the clipboard and mark some important detail on the image. The edited image can be saved or copied to the clipboard.",
+    "descr": "The web analog of the Snipping Tool app. The user can upload an image, mark some important detail on the image and save the edited image. Import and export works both from a file and from the clipboard.",
     "img": "./img/works/image-editor.png",
     "tags": ["VUE", "VUEX", "TYPESCRIPT", "HTML5 CANVAS", "VERCEL"],
     "links": [
@@ -102,6 +102,32 @@
       {
         "svg": "link",
         "src": "https://image-editor-hartaithan.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Next Posts",
+    "categ": "Web App | Next.js",
+    "descr": "A simple news website. Authorized users can create posts. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
+    "img": "./img/works/next-posts.png",
+    "tags": [
+      "NEXT.JS",
+      "SSR",
+      "TYPESCRIPT",
+      "MANTINE",
+      "SUPABASE",
+      "CLOUDINARY",
+      "MAGIC LINK"
+    ],
+    "links": [
+      {
+        "svg": "github",
+        "src": "https://github.com/Hartaithan/next-posts"
+      },
+      {
+        "svg": "link",
+        "src": "https://next-posts-hartaithan.vercel.app/"
       }
     ]
   }
