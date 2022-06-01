@@ -1,5 +1,5 @@
 import { FC, Fragment, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, DragHandlers } from "framer-motion";
 import { sliderAnimation } from "../../animations";
 import data from "../../data/works.json";
 import { IWorkItem } from "../../models/WorksModel";
@@ -10,11 +10,35 @@ const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
+const transition = {
+  x: { type: "spring", stiffness: 300, damping: 30 },
+  opacity: { duration: 0.5 },
+};
 
 const Carousel: FC = (): JSX.Element => {
   const works = data as IWorkItem[];
   const [[page, dir], setPage] = useState([0, 0]);
   const [pos, setPos] = useState(true);
+
+  const handlePrevPage = () => {
+    changePage(-1);
+  };
+
+  const handleNextPage = () => {
+    changePage(+1);
+  };
+
+  const handleDragEnd: DragHandlers["onDragEnd"] = (
+    e,
+    { offset, velocity }
+  ) => {
+    const swipe = swipePower(offset.x, velocity.x);
+    if (swipe < -swipeConfidenceThreshold) {
+      handleNextPage();
+    } else if (swipe > swipeConfidenceThreshold) {
+      handlePrevPage();
+    }
+  };
 
   const changePage = (newDir: number) => {
     const numOfPages = works.length - 1;
@@ -67,21 +91,11 @@ const Carousel: FC = (): JSX.Element => {
           initial="sliderEnter"
           animate="sliderCenter"
           exit="sliderExit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.5 },
-          }}
+          transition={transition}
+          onDragEnd={handleDragEnd}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-            if (swipe < -swipeConfidenceThreshold) {
-              changePage(+1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              changePage(-1);
-            }
-          }}
         >
           <div
             className="works__main__container"
@@ -115,9 +129,9 @@ const Carousel: FC = (): JSX.Element => {
                   justifyContent: pos === false ? "flex-start" : "flex-end",
                 }}
               >
-                {works[page].tags.map((tag) => {
-                  return <li key={tag}>{tag}</li>;
-                })}
+                {works[page].tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
               </ul>
             </div>
             <div
@@ -145,11 +159,7 @@ const Carousel: FC = (): JSX.Element => {
             className="works__main__img"
             style={{ alignSelf: pos === false ? "flex-end" : "flex-start" }}
           >
-            <img
-              src={works[page].img}
-              draggable="false"
-              alt="works main img"
-            ></img>
+            <img src={works[page].img} draggable="false" alt="works main img" />
           </div>
         </motion.div>
       </AnimatePresence>
@@ -157,12 +167,12 @@ const Carousel: FC = (): JSX.Element => {
         <IconArrow
           direction="left"
           className="works__arrows__left"
-          onClick={() => changePage(-1)}
+          onClick={handlePrevPage}
         />
         <IconArrow
           direction="right"
           className="works__arrows__right"
-          onClick={() => changePage(+1)}
+          onClick={handleNextPage}
         />
       </div>
       <div className="works__pages">
