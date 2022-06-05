@@ -47,6 +47,14 @@
     "title": "Mobile Skills",
     "content": "Mobile Skills",
     "containsTags": true,
-    "tags": ["ANDROID", "ANDROID SDK", "KOTLIN", "JAVA", "VOLLEY"]
+    "tags": [
+      "ANDROID",
+      "ANDROID SDK",
+      "KOTLIN",
+      "JAVA",
+      "VOLLEY",
+      "REACT NATIVE",
+      "REACT NAVIGATION"
+    ]
   }
 ]
