@@ -109,7 +109,7 @@
     "id": 6,
     "name": "Next Posts",
     "categ": "Web App | Next.js",
-    "descr": "A simple news website. Authorized users can create posts. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
+    "descr": "A simple news website. Authorized users can create posts and leave comments. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
     "img": "./img/works/next-posts.png",
     "tags": [
       "NEXT.JS",
