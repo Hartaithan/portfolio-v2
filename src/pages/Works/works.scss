@@ -241,6 +241,61 @@
 @media (max-width: 992px) {
 }
 
+@media (max-width: 992px) and (orientation: landscape) {
+  .works {
+    &__main {
+      max-width: 80%;
+      &__container {
+        width: 60%;
+        &__title {
+          font-size: 16px;
+        }
+        &__category {
+          font-size: 12px;
+        }
+        &__descr {
+          padding: 8px;
+          font-size: 12px;
+        }
+        &__tags {
+          ul {
+            li {
+              font-size: 8px;
+              padding: 5px 10px;
+              margin: 0;
+              margin-right: 5px;
+              margin-bottom: 3px;
+            }
+          }
+        }
+        &__links {
+          height: 15px;
+        }
+      }
+      &__img {
+        position: absolute;
+        width: 50%;
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+    &__arrows {
+      height: 20px;
+      padding: 0 20px;
+    }
+    &__pages {
+      &__item {
+        height: 8px;
+        width: 8px;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
 }
 

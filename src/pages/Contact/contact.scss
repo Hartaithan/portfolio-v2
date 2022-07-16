@@ -97,6 +97,17 @@
   }
 }
 
+@media (max-width: 992px) and (orientation: landscape) {
+  .contact {
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    &__icon {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
 }
 

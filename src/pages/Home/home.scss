@@ -109,6 +109,23 @@
   }
 }
 
+@media (max-width: 992px) and (orientation: landscape) {
+  .home {
+    width: 60%;
+    &__text {
+      flex: 6;
+      font-size: 36px;
+    }
+    &__buttons {
+      flex: 4;
+      &__button {
+        padding: 8px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
 }
 
