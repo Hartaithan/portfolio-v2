@@ -114,6 +114,43 @@
   }
 }
 
+@media (max-width: 1200px) and (orientation: landscape) {
+  .about {
+    width: 80%;
+    &__element {
+      padding: $about_el_pad_mobile;
+      &__title {
+        height: fit-content;
+        font-size: 18px;
+      }
+      &__content {
+        height: fit-content;
+        ul {
+          li {
+            font-size: 10px;
+            padding: 3px 6px;
+            margin: 3px 2px;
+            border: 1px solid white;
+            border-radius: 8px;
+          }
+        }
+      }
+      &.withTags {
+        padding: 10px;
+      }
+    }
+    #aboutme {
+      .about__element__title {
+        justify-content: center;
+      }
+      .about__element__content {
+        justify-content: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .about {
     max-height: 80%;
