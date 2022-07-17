@@ -194,6 +194,29 @@
 @media (max-width: 768px) {
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+  .about {
+    grid-template-rows: 90px 160px;
+    &__element {
+      &__title {
+        font-size: 14px;
+      }
+      &__content {
+        ul {
+          li {
+            font-size: 7px;
+          }
+        }
+      }
+    }
+    #aboutme {
+      .about__element__content {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .about {
     width: 80%;
@@ -201,13 +224,13 @@
       padding: $about_el_pad_mobile;
       &__title {
         height: fit-content;
-        font-size: 18px;
+        font-size: 16px;
       }
       &__content {
         height: fit-content;
         ul {
           li {
-            font-size: 10px;
+            font-size: 8px;
             padding: 3px 6px;
             margin: 3px 2px;
             border: 1px solid white;
@@ -225,7 +248,7 @@
       }
       .about__element__content {
         justify-content: center;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
