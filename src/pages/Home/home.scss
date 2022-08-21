@@ -16,6 +16,9 @@
     justify-content: flex-end;
     font-size: 118px;
     font-weight: 600;
+    & > svg:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
   &__buttons {
     flex: 3;
