@@ -1,6 +1,24 @@
 @import "../../styles/variables";
 @import "../../styles/colors";
 
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  25% {
+    stroke-dashoffset: 100;
+  }
+  50% {
+    stroke-dashoffset: 300;
+  }
+  75% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 .home {
   width: 70%;
   height: 100%;
@@ -16,8 +34,27 @@
     justify-content: flex-end;
     font-size: 118px;
     font-weight: 600;
-    & > svg:not(:last-child) {
-      margin-bottom: 40px;
+    & > svg {
+      & * {
+        transition: all 0.4s ease;
+      }
+      & > path {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+        animation: dash 15s infinite linear;
+        animation-fill-mode: forwards;
+      }
+      &:hover {
+        path {
+          fill: transparent;
+          stroke: white;
+          stroke-width: 2.66667;
+          stroke-miterlimit: 10;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
   }
   &__buttons {

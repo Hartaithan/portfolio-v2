@@ -48,6 +48,11 @@ export const textAnimation = {
   },
 };
 
+export const pathAnimation = {
+  initial: { pathLength: 0 },
+  animate: { pathLength: 1 },
+};
+
 export const buttonsAnimation = {
   initial: {
     x: 400,
