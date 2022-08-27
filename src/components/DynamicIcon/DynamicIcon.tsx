@@ -1,4 +1,4 @@
-import { IIconsProps, IDynamicIconProps } from "./models/IconsModel";
+import { IIconsProps } from "../../models/IconsModel";
 
 export const IconArrowLeft = (props: IIconsProps) => {
   return (
@@ -68,6 +68,10 @@ export const IconInstagram = (props: IIconsProps) => {
     </svg>
   );
 };
+
+export interface IDynamicIconProps {
+  svg: string;
+}
 
 export const DynamicIcon: React.FC<IDynamicIconProps> = ({ svg }) => {
   switch (svg) {

@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { IBackdropProps } from "../../models/BackdropModel";
 import "./backdrop.scss";
+
+export interface IBackdropProps {
+  children: React.ReactNode;
+  onClick: () => void;
+}
 
 const Backdrop: React.FC<IBackdropProps> = (props) => {
   const { children, onClick } = props;

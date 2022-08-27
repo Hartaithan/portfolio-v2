@@ -3,8 +3,13 @@ import * as THREE from "three";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { IFigureProps } from "../../models/FigureModel";
 import { PerspectiveCamera } from "three";
+import { ICursor, ISizes } from "../../models/FigureModel";
+
+export interface IFigureProps {
+  sizes: ISizes;
+  cursor: ICursor;
+}
 
 const Figure: React.FC<IFigureProps> = (props) => {
   const { sizes, cursor } = props;

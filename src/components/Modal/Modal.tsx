@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop/Backdrop";
-import { IModalProps } from "../../models/ModalModel";
 import { modalAnimation } from "../../animations";
 import "./modal.scss";
-import { IconDownload } from "../../icons";
+import { IconDownload } from "../DynamicIcon/DynamicIcon";
+
+export interface IModalProps {
+  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 const Modal: React.FC<IModalProps> = (props) => {
   const { setModalOpen } = props;
