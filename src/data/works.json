@@ -8,11 +8,11 @@
     "tags": ["ANDROID", "KOTLIN", "VOLLEY"],
     "links": [
       {
-        "svg": "playmarket",
+        "icon": "playmarket",
         "src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
       },
       {
-        "svg": "link",
+        "icon": "link",
         "src": "https://hartaithan.github.io/a-z/"
       }
     ]
@@ -34,11 +34,11 @@
     ],
     "links": [
       {
-        "svg": "github",
+        "icon": "github",
         "src": "https://github.com/Hartaithan/camo-tracker-v2"
       },
       {
-        "svg": "link",
+        "icon": "link",
         "src": "https://camo-tracker.herokuapp.com/"
       }
     ]
@@ -60,11 +60,11 @@
     ],
     "links": [
       {
-        "svg": "github",
+        "icon": "github",
         "src": "https://github.com/Hartaithan/whiteboard"
       },
       {
-        "svg": "link",
+        "icon": "link",
         "src": "https://this-is-whiteboard.herokuapp.com/"
       }
     ]
@@ -78,11 +78,11 @@
     "tags": ["REACT", "AXIOS", "TYPESCRIPT", "BOOTSTRAP", "VERCEL", "MOBX"],
     "links": [
       {
-        "svg": "github",
+        "icon": "github",
         "src": "https://github.com/Hartaithan/rick-and-morty-api"
       },
       {
-        "svg": "link",
+        "icon": "link",
         "src": "https://rick-and-morty-five-ebon.vercel.app/"
       }
     ]
@@ -96,11 +96,11 @@
     "tags": ["VUE", "VUEX", "TYPESCRIPT", "HTML5 CANVAS", "VERCEL"],
     "links": [
       {
-        "svg": "github",
+        "icon": "github",
         "src": "https://github.com/Hartaithan/image-editor"
       },
       {
-        "svg": "link",
+        "icon": "link",
         "src": "https://image-editor-hartaithan.vercel.app/"
       }
     ]
@@ -122,11 +122,11 @@
     ],
     "links": [
       {
-        "svg": "github",
+        "icon": "github",
         "src": "https://github.com/Hartaithan/next-posts"
       },
       {
-        "svg": "link",
+        "icon": "link",
         "src": "https://next-posts-hartaithan.vercel.app/"
       }
     ]

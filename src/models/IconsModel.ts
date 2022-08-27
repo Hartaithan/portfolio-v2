@@ -1,4 +1,6 @@
-export interface IIconsProps {
-  className?: string;
-  onClick?: () => void;
-}
+export type IconSocialType =
+  | "playmarket"
+  | "github"
+  | "email"
+  | "instagram"
+  | "link";

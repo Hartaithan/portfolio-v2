@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop/Backdrop";
 import { modalAnimation } from "../../animations";
+import IconDownload from "../../icons/Download";
 import "./modal.scss";
-import { IconDownload } from "../DynamicIcon/DynamicIcon";
 
 export interface IModalProps {
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;

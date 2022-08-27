@@ -3,12 +3,7 @@ import "./contact.scss";
 import { motion } from "framer-motion";
 import { containerAnimation } from "../../animations";
 import useTitle from "../../hooks/useTitle";
-import {
-  IconEmail,
-  IconGithub,
-  IconInstagram,
-  IconPlaymarket,
-} from "../../icons";
+import IconSocials from "../../icons/Socials";
 
 const Contact: React.FC = () => {
   useTitle("Contact");
@@ -23,17 +18,17 @@ const Contact: React.FC = () => {
     >
       <a href="mailto:hartaithan@gmail.com" target="_blank" rel="noreferrer">
         <div className="contact__icon" id="email">
-          <IconEmail />
+          <IconSocials type="email" />
         </div>
       </a>
       <a href="//github.com/Hartaithan" target="_blank" rel="noreferrer">
         <div className="contact__icon" id="github">
-          <IconGithub />
+          <IconSocials type="github" />
         </div>
       </a>
       <a href="//www.instagram.com/hartaithan" target="_blank" rel="noreferrer">
         <div className="contact__icon" id="instagram">
-          <IconInstagram />
+          <IconSocials type="instagram" />
         </div>
       </a>
       <a
@@ -42,7 +37,7 @@ const Contact: React.FC = () => {
         rel="noreferrer"
       >
         <div className="contact__icon" id="playmarket">
-          <IconPlaymarket />
+          <IconSocials type="playmarket" />
         </div>
       </a>
     </motion.div>

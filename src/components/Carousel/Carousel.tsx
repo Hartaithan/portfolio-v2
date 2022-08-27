@@ -2,7 +2,9 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sliderAnimation } from "../../animations";
 import items from "../../data/works.json";
-import { DynamicIcon, IconArrowLeft, IconArrowRight } from "../../icons";
+import IconSocials from "../../icons/Socials";
+import IconArrow from "../../icons/Arrow";
+import { IconSocialType } from "../../models/IconsModel";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
@@ -127,11 +129,11 @@ const Carousel: React.FC = (): JSX.Element => {
                 return (
                   <a
                     href={link.src}
-                    key={link.svg}
+                    key={link.icon}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <DynamicIcon svg={link.svg} />
+                    <IconSocials type={link.icon as IconSocialType} />
                   </a>
                 );
               })}
@@ -150,11 +152,13 @@ const Carousel: React.FC = (): JSX.Element => {
         </motion.div>
       </AnimatePresence>
       <div className="works__arrows">
-        <IconArrowLeft
+        <IconArrow
+          direction="left"
           className="works__arrows__left"
           onClick={() => changePage(-1)}
         />
-        <IconArrowRight
+        <IconArrow
+          direction="right"
           className="works__arrows__right"
           onClick={() => changePage(+1)}
         />
