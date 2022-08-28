@@ -1,10 +1,11 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sliderAnimation } from "../../animations";
-import items from "../../data/works.json";
+import data from "../../data/works.json";
 import IconSocials from "../../icons/Socials";
 import IconArrow from "../../icons/Arrow";
 import { IconSocialType } from "../../models/IconsModel";
+import { IWorkItem } from "../../models/WorksModel";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
@@ -12,11 +13,12 @@ const swipePower = (offset: number, velocity: number) => {
 };
 
 const Carousel: React.FC = (): JSX.Element => {
+  const works = data as IWorkItem[];
   const [[page, dir], setPage] = React.useState([0, 0]);
   const [pos, setPos] = React.useState(true);
 
   function changePage(newDir: number) {
-    const numOfPages = items.length - 1;
+    const numOfPages = works.length - 1;
     switch (newDir) {
       case -1:
         if (page > 0) {
@@ -60,7 +62,7 @@ const Carousel: React.FC = (): JSX.Element => {
       <AnimatePresence exitBeforeEnter initial={false} custom={dir}>
         <motion.div
           className="works__main"
-          key={items[page].name}
+          key={works[page].name}
           custom={dir}
           variants={sliderAnimation}
           initial="sliderEnter"
@@ -92,7 +94,7 @@ const Carousel: React.FC = (): JSX.Element => {
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
             >
-              {`${items[page].id}. ${items[page].name}`}
+              {`${works[page].id}. ${works[page].name}`}
             </div>
             <div
               className="works__main__container__category"
@@ -100,13 +102,13 @@ const Carousel: React.FC = (): JSX.Element => {
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
             >
-              {items[page].categ}
+              {works[page].categ}
             </div>
             <div
               className="works__main__container__descr"
               style={{ textAlign: pos === false ? "start" : "end" }}
             >
-              {items[page].descr}
+              {works[page].descr}
             </div>
             <div className="works__main__container__tags">
               <ul
@@ -114,7 +116,7 @@ const Carousel: React.FC = (): JSX.Element => {
                   justifyContent: pos === false ? "flex-start" : "flex-end",
                 }}
               >
-                {items[page].tags.map((tag) => {
+                {works[page].tags.map((tag) => {
                   return <li key={tag}>{tag}</li>;
                 })}
               </ul>
@@ -125,7 +127,7 @@ const Carousel: React.FC = (): JSX.Element => {
                 justifyContent: pos === false ? "flex-start" : "flex-end",
               }}
             >
-              {items[page].links.map((link) => {
+              {works[page].links.map((link) => {
                 return (
                   <a
                     href={link.src}
@@ -144,7 +146,7 @@ const Carousel: React.FC = (): JSX.Element => {
             style={{ alignSelf: pos === false ? "flex-end" : "flex-start" }}
           >
             <img
-              src={items[page].img}
+              src={works[page].img}
               draggable="false"
               alt="works main img"
             ></img>
@@ -164,7 +166,7 @@ const Carousel: React.FC = (): JSX.Element => {
         />
       </div>
       <div className="works__pages">
-        {items.map((item, index) => {
+        {works.map((item, index) => {
           return (
             <div
               className="works__pages__item"

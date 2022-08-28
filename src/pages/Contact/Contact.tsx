@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { containerAnimation } from "../../animations";
 import useTitle from "../../hooks/useTitle";
 import IconSocials from "../../icons/Socials";
-import contacts from "../../data/contacts.json";
+import data from "../../data/contacts.json";
 import { IconSocialType } from "../../models/IconsModel";
+import { IContactItem } from "../../models/ContactModel";
 
 const Contact: React.FC = () => {
+  const contacts = data as IContactItem[];
   useTitle("Contact");
 
   return (

@@ -2,10 +2,12 @@ import React from "react";
 import "./about.scss";
 import { motion } from "framer-motion";
 import { containerAnimation } from "../../animations";
-import items from "../../data/about.json";
+import data from "../../data/about.json";
 import useTitle from "../../hooks/useTitle";
+import { IAboutItem } from "../../models/AboutModel";
 
 const About: React.FC = () => {
+  const about = data as IAboutItem[];
   useTitle("About");
 
   return (
@@ -16,7 +18,7 @@ const About: React.FC = () => {
       animate="visible"
       exit="exit"
     >
-      {items.map((item) => {
+      {about.map((item) => {
         if (!item.containsTags) {
           return (
             <div className="about__element" id={item.id} key={item.id}>
