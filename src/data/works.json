@@ -109,7 +109,7 @@
     "id": 6,
     "name": "Next Posts",
     "categ": "Web App | Next.js",
-    "descr": "A simple news website. Authorized users can create posts and leave comments. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
+    "descr": "A simple news website. Authorized users can create posts, rate them and leave comments. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
     "img": "./img/works/next-posts.png",
     "tags": [
       "NEXT.JS",
@@ -128,6 +128,24 @@
       {
         "icon": "link",
         "src": "https://next-posts-hartaithan.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Image Aware Background",
+    "categ": "Web App | Vue",
+    "descr": "An application that identifies one dominant and 5 most used colors from a given image. The search for colors is implemented using the Canvas API.",
+    "img": "./img/works/image-aware-background.png",
+    "tags": ["VUE", "VITE", "TYPESCRIPT", "HTML5 CANVAS", "VERCEL"],
+    "links": [
+      {
+        "icon": "github",
+        "src": "https://github.com/Hartaithan/image-aware-background"
+      },
+      {
+        "icon": "link",
+        "src": "https://image-aware-background.vercel.app/"
       }
     ]
   }
