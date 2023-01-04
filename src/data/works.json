@@ -45,32 +45,6 @@
   },
   {
     "id": 3,
-    "name": "Whiteboard",
-    "categ": "Web App | React | Express",
-    "descr": "A test project for learn websockets. A simple collaborative whiteboard for planning something together or just drawing with a friend. Work in progress...",
-    "img": "./img/works/whiteboard.png",
-    "tags": [
-      "NODE.JS",
-      "EXPRESS.JS",
-      "REACT",
-      "WEBSOCKETS",
-      "SOCKET.IO",
-      "HTML5 CANVAS",
-      "HEROKU"
-    ],
-    "links": [
-      {
-        "icon": "github",
-        "src": "https://github.com/Hartaithan/whiteboard"
-      },
-      {
-        "icon": "link",
-        "src": "https://this-is-whiteboard.herokuapp.com/"
-      }
-    ]
-  },
-  {
-    "id": 4,
     "name": "Rick and Morty Characters Wiki",
     "categ": "Web App | React",
     "descr": "A test project for typescript practice. The user can view information about a character, search by character name, type, species, and filter by status and gender. Hosted on Vercel",
@@ -88,7 +62,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Image Editor",
     "categ": "Web App | Vue",
     "descr": "The web analog of the Snipping Tool app. The user can upload an image, mark some important detail on the image and save the edited image. Import and export works both from a file and from the clipboard.",
@@ -106,7 +80,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Next Posts",
     "categ": "Web App | Next.js",
     "descr": "A simple news website. Authorized users can create posts, rate them and leave comments. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
@@ -132,7 +106,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Image Aware Background",
     "categ": "Web App | Vue",
     "descr": "An application that identifies one dominant and 5 most used colors from a given image. The search for colors is implemented using the Canvas API.",
