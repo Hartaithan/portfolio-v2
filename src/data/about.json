@@ -8,14 +8,11 @@
   },
   {
     "id": "frontend",
-    "title": "Front-End Skills",
-    "content": "Front-End Skills",
+    "title": "Frontend Skills",
+    "content": "Frontend Skills",
     "containsTags": true,
     "tags": [
-      "HTML",
-      "CSS",
-      "SASS",
-      "BOOTSTRAP",
+      "HTML/CSS/SCSS",
       "RESP. DESIGN",
       "JS ES6+",
       "TS 4+",
@@ -25,7 +22,8 @@
       "NEXT.JS",
       "SSR",
       "VUE",
-      "VUEX"
+      "VUEX",
+      "APOLLO CLIENT"
     ]
   },
   {
@@ -37,7 +35,7 @@
       "NODE.JS",
       "MONGO DB",
       "EXPRESS.JS",
-      "NPM | YARN",
+      "REST",
       "AUTHENTICATION",
       "WEBSOCKETS"
     ]
@@ -54,7 +52,8 @@
       "JAVA",
       "VOLLEY",
       "REACT NATIVE",
-      "REACT NAVIGATION"
+      "REACT NAVIGATION",
+      "REANIMATED"
     ]
   }
 ]
