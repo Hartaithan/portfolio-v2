@@ -21,7 +21,7 @@
     "id": 2,
     "name": "Camo Tracker",
     "categ": "Web App | React | Express",
-    "descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Heroku",
+    "descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Vercel",
     "img": "./img/works/camo-tracker.png",
     "tags": [
       "NODE.JS",
@@ -30,7 +30,7 @@
       "REACT",
       "ROUTER DOM",
       "REDUX",
-      "HEROKU"
+      "VERCEL"
     ],
     "links": [
       {
@@ -39,7 +39,7 @@
       },
       {
         "icon": "link",
-        "src": "https://camo-tracker.herokuapp.com/"
+        "src": "https://camo-tracker-hartaithan.vercel.app/"
       }
     ]
   },
