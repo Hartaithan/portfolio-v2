@@ -82,7 +82,7 @@
   {
     "id": 5,
     "name": "Next Posts",
-    "categ": "Web App | Next.js",
+    "categ": "Web App | Next.JS",
     "descr": "A simple news website. Authorized users can create posts, rate them and leave comments. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
     "img": "./img/works/next-posts.png",
     "tags": [
@@ -120,6 +120,24 @@
       {
         "icon": "link",
         "src": "https://image-aware-background.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Trophy List Fetcher",
+    "categ": "Web App | Next.JS",
+    "descr": "Trophy List Fetching Tool. The application is able to fetch trophy lists from psnprofiles by parsing and directly from PSN API by authorization. The application was created to automate the import of trophy lists.",
+    "img": "./img/works/trophy-list-fetcher.png",
+    "tags": ["NEXT.JS", "SSR", "TYPESCRIPT", "PSN", "COOKIES", "CHEERIO"],
+    "links": [
+      {
+        "icon": "github",
+        "src": "https://github.com/Hartaithan/trophy-list-fetcher"
+      },
+      {
+        "icon": "link",
+        "src": "https://trophy-list-fetcher.vercel.app/"
       }
     ]
   }
