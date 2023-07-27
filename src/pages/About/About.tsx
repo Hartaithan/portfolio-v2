@@ -25,7 +25,9 @@ const About: React.FC = () => {
               <div className="about__element__title">
                 <span>{item.title}</span>
               </div>
-              <div className="about__element__content">{item.content}</div>
+              <div className="about__element__content">
+                <p>{item.content}</p>
+              </div>
             </div>
           );
         } else {
