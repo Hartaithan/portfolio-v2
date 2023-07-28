@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 import "./works.scss";
 import { motion } from "framer-motion";
 import { containerAnimation } from "../../animations";
 import Carousel from "../../components/Carousel/Carousel";
 import useTitle from "../../hooks/useTitle";
 
-const Works: React.FC = () => {
+const Works: FC = () => {
   useTitle("Works");
 
   return (

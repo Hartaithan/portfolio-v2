@@ -1,28 +1,33 @@
-import React from "react";
 import * as THREE from "three";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { PerspectiveCamera } from "three";
 import { ICursor, ISizes } from "../../models/FigureModel";
+import { FC, memo, useMemo, useRef } from "react";
 
 export interface IFigureProps {
   sizes: ISizes;
   cursor: ICursor;
 }
 
-const Figure: React.FC<IFigureProps> = (props) => {
+const getRandNum = (max: number) => {
+  return Math.floor(Math.random() * max) + 1;
+};
+
+const Figure: FC<IFigureProps> = (props) => {
   const { sizes, cursor } = props;
-  const camera = React.useRef<PerspectiveCamera | null>(null);
+  const camera = useRef<PerspectiveCamera | null>(null);
   const font = useLoader(FontLoader, "/fonts/arial.json");
-  const mesh = React.useRef<THREE.Mesh | null>(null);
+  const mesh = useRef<THREE.Mesh | null>(null);
   const material = new THREE.MeshStandardMaterial({
     color: "white",
     wireframe: true,
     transparent: true,
     opacity: 0,
   });
-  const options = React.useMemo(
+
+  const options = useMemo(
     () => ({
       font: font,
       size: 2,
@@ -36,11 +41,8 @@ const Figure: React.FC<IFigureProps> = (props) => {
     }),
     [font]
   );
-  const getRandNum = React.useCallback((max: number) => {
-    return Math.floor(Math.random() * max) + 1;
-  }, []);
 
-  const figures = React.useMemo(
+  const figures = useMemo(
     () => [
       {
         id: 1,
@@ -241,4 +243,4 @@ const Figure: React.FC<IFigureProps> = (props) => {
   );
 };
 
-export default Figure;
+export default memo(Figure);

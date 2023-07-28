@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 import { IconSocialType } from "../models/IconsModel";
 
 interface IIconSocialsProps {
   type: IconSocialType;
 }
 
-const IconSocials: React.FC<IIconSocialsProps> = (props) => {
+const IconSocials: FC<IIconSocialsProps> = (props) => {
   const { type } = props;
   switch (type) {
     case "playmarket":

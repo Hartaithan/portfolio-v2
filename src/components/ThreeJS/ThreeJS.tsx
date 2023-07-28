@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, Suspense, useCallback, useEffect } from "react";
 import "./threejs.scss";
 import { Canvas } from "@react-three/fiber";
 import Figure from "../Figure/Figure";
@@ -14,26 +14,22 @@ const cursor: ICursor = {
   y: 0,
 };
 
-const ThreeJS: React.FC = () => {
+const ThreeJS: FC = () => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const MemoizedFigure = React.memo(Figure);
 
-  const handleMouseMove = React.useCallback((event: MouseEvent) => {
+  const handleMouseMove = useCallback((event: MouseEvent) => {
     cursor.x = event.clientX / sizes.width - 0.5;
     cursor.y = event.clientY / sizes.height - 0.5;
   }, []);
 
-  const handleOrientation = React.useCallback(
-    (event: DeviceOrientationEvent) => {
-      if (event.gamma && event.beta) {
-        cursor.x = event.gamma * 0.03;
-        cursor.y = event.beta * 0.01;
-      }
-    },
-    []
-  );
+  const handleOrientation = useCallback((event: DeviceOrientationEvent) => {
+    if (event.gamma && event.beta) {
+      cursor.x = event.gamma * 0.03;
+      cursor.y = event.beta * 0.01;
+    }
+  }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isMobile) {
       window.addEventListener("mousemove", handleMouseMove);
     }
@@ -47,12 +43,12 @@ const ThreeJS: React.FC = () => {
   }, [handleMouseMove, handleOrientation]); // eslint-disable-line
 
   return (
-    <React.Suspense fallback={null}>
+    <Suspense fallback={null}>
       <Canvas className="threejs" dpr={window.devicePixelRatio}>
         <ambientLight />
-        <MemoizedFigure sizes={sizes} cursor={cursor} />
+        <Figure sizes={sizes} cursor={cursor} />
       </Canvas>
-    </React.Suspense>
+    </Suspense>
   );
 };
 

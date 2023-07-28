@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, Fragment, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sliderAnimation } from "../../animations";
 import data from "../../data/works.json";
@@ -12,12 +12,12 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-const Carousel: React.FC = (): JSX.Element => {
+const Carousel: FC = (): JSX.Element => {
   const works = data as IWorkItem[];
-  const [[page, dir], setPage] = React.useState([0, 0]);
-  const [pos, setPos] = React.useState(true);
+  const [[page, dir], setPage] = useState([0, 0]);
+  const [pos, setPos] = useState(true);
 
-  function changePage(newDir: number) {
+  const changePage = (newDir: number) => {
     const numOfPages = works.length - 1;
     switch (newDir) {
       case -1:
@@ -43,9 +43,9 @@ const Carousel: React.FC = (): JSX.Element => {
         setPos(!pos);
         break;
     }
-  }
+  };
 
-  function changePageBullet(index: number) {
+  const changePageBullet = (index: number) => {
     if (index !== page) {
       if (index < page) {
         setPage([index, -1]);
@@ -55,10 +55,10 @@ const Carousel: React.FC = (): JSX.Element => {
         setPos(!pos);
       }
     }
-  }
+  };
 
   return (
-    <>
+    <Fragment>
       <AnimatePresence exitBeforeEnter initial={false} custom={dir}>
         <motion.div
           className="works__main"
@@ -178,7 +178,7 @@ const Carousel: React.FC = (): JSX.Element => {
           );
         })}
       </div>
-    </>
+    </Fragment>
   );
 };
 

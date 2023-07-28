@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 interface IIconArrowProps {
   className: string;
@@ -6,7 +6,7 @@ interface IIconArrowProps {
   direction: "left" | "right";
 }
 
-const IconArrow: React.FC<IIconArrowProps> = (props) => {
+const IconArrow: FC<IIconArrowProps> = (props) => {
   const { className, onClick, direction } = props;
   switch (direction) {
     case "left":

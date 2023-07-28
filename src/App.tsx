@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -10,9 +10,9 @@ import ContactPage from "./pages/Contact/Contact";
 import HomePage from "./pages/Home/Home";
 import WorksPage from "./pages/Works/Works";
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
-    <>
+    <Fragment>
       <Navigation />
       <AnimatePresence exitBeforeEnter>
         <Routes key="routes">
@@ -23,7 +23,7 @@ const App: React.FC = () => {
         </Routes>
       </AnimatePresence>
       <ThreeJS />
-    </>
+    </Fragment>
   );
 };
 

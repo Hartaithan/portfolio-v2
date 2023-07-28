@@ -1,13 +1,6 @@
-import React from "react";
-
 const useTitle = (title: string) => {
-  React.useEffect(() => {
-    const prevTitle = document.title;
-    document.title = `${title} | Hartaithan.`;
-    return () => {
-      document.title = prevTitle;
-    };
-  });
+  if (!document) return;
+  document.title = `${title} | Hartaithan.`;
 };
 
 export default useTitle;

@@ -1,25 +1,25 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop/Backdrop";
 import { modalAnimation } from "../../animations";
 import IconDownload from "../../icons/Download";
 import "./modal.scss";
+import { Dispatch, FC, SetStateAction } from "react";
 
 export interface IModalProps {
-  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const Modal: React.FC<IModalProps> = (props) => {
-  const { setModalOpen } = props;
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.href = "./data/resume-frontend-stepanov-vladimir.pdf";
+  link.setAttribute("download", `resume-frontend-stepanov-vladimir.pdf`);
+  document.body.appendChild(link);
+  link.click();
+  link.parentNode?.removeChild(link);
+};
 
-  function downloadResume() {
-    const link = document.createElement("a");
-    link.href = "./data/resume-frontend-stepanov-vladimir.pdf";
-    link.setAttribute("download", `resume-frontend-stepanov-vladimir.pdf`);
-    document.body.appendChild(link);
-    link.click();
-    link.parentNode?.removeChild(link);
-  }
+const Modal: FC<IModalProps> = (props) => {
+  const { setModalOpen } = props;
 
   return (
     <Backdrop onClick={() => setModalOpen(false)}>

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import "./contact.scss";
 import { motion } from "framer-motion";
 import { containerAnimation } from "../../animations";
@@ -8,7 +8,7 @@ import data from "../../data/contacts.json";
 import { IconSocialType } from "../../models/IconsModel";
 import { IContactItem } from "../../models/ContactModel";
 
-const Contact: React.FC = () => {
+const Contact: FC = () => {
   const contacts = data as IContactItem[];
   useTitle("Contact");
 

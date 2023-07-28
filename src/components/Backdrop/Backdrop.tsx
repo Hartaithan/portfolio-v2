@@ -1,13 +1,12 @@
-import React from "react";
+import { FC, PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 import "./backdrop.scss";
 
 export interface IBackdropProps {
-  children: React.ReactNode;
   onClick: () => void;
 }
 
-const Backdrop: React.FC<IBackdropProps> = (props) => {
+const Backdrop: FC<PropsWithChildren<IBackdropProps>> = (props) => {
   const { children, onClick } = props;
   return (
     <motion.div
