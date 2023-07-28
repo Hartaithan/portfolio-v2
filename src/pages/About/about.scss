@@ -41,7 +41,7 @@
       flex-grow: 1;
       white-space: pre-wrap;
       p {
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
       ul {
         display: flex;
@@ -55,7 +55,7 @@
           border-radius: 10px;
           border: 2px solid white;
           padding: 5px 10px;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 500;
           -webkit-transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
@@ -95,7 +95,7 @@
 
 @media (max-width: 1400px) {
   .about {
-    width: 70%;
+    width: 80%;
     &__element {
       &__content {
         p {
@@ -106,15 +106,8 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .about {
-    width: 80%;
-  }
-}
-
 @media (max-width: 1200px) and (orientation: landscape) {
   .about {
-    width: 80%;
     &__element {
       padding: $about_el_pad_mobile;
       &__title {
@@ -212,7 +205,8 @@
 
 @media (max-width: 576px) {
   .about {
-    width: 80%;
+    width: 90%;
+    gap: 8px 8px;
     &__element {
       padding: $about_el_pad_mobile;
       &__title {
@@ -253,6 +247,5 @@
   .about {
     overflow: auto;
     max-height: 80%;
-    width: 90%;
   }
 }
