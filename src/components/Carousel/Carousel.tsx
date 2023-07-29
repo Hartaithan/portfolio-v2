@@ -2,10 +2,9 @@ import { FC, Fragment, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sliderAnimation } from "../../animations";
 import data from "../../data/works.json";
-import IconSocials from "../../icons/Socials";
-import IconArrow from "../../icons/Arrow";
-import { IconSocialType } from "../../models/IconsModel";
 import { IWorkItem } from "../../models/WorksModel";
+import IconArrow from "../../icons/Arrow";
+import { socialIcons } from "../../constants/socials";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
@@ -128,6 +127,7 @@ const Carousel: FC = (): JSX.Element => {
               }}
             >
               {works[page].links.map((link) => {
+                const Icon = socialIcons[link.icon];
                 return (
                   <a
                     href={link.src}
@@ -135,7 +135,7 @@ const Carousel: FC = (): JSX.Element => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <IconSocials type={link.icon as IconSocialType} />
+                    <Icon width={20} height={20} />
                   </a>
                 );
               })}

@@ -1,5 +1,7 @@
+import { SocialIconType } from "./IconsModel";
+
 export interface IContactItem {
   id: number;
-  icon: string;
+  icon: SocialIconType;
   link: string;
 }

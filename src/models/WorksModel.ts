@@ -1,5 +1,7 @@
+import { SocialIconType } from "./IconsModel";
+
 export interface IWorkLink {
-  icon: string;
+  icon: SocialIconType;
   src: string;
 }
 

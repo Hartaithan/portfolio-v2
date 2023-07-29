@@ -32,7 +32,7 @@ const Modal: FC<IModalProps> = (props) => {
         exit="exit"
       >
         <div className="modal__download" onClick={() => downloadResume()}>
-          <IconDownload />
+          <IconDownload width={40} height={40} />
         </div>
         <iframe
           className="modal__resume"

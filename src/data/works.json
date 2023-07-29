@@ -8,7 +8,7 @@
     "tags": ["ANDROID", "KOTLIN", "VOLLEY"],
     "links": [
       {
-        "icon": "playmarket",
+        "icon": "googlePlay",
         "src": "https://play.google.com/store/apps/details?id=com.hartaithan.a_z"
       },
       {

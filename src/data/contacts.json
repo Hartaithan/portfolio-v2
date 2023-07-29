@@ -1,10 +1,10 @@
 [
-  { "id": 1, "icon": "email", "link": "mailto:hartaithan@gmail.com" },
+  { "id": 1, "icon": "mail", "link": "mailto:hartaithan@gmail.com" },
   { "id": 2, "icon": "github", "link": "//github.com/Hartaithan" },
   { "id": 3, "icon": "instagram", "link": "//www.instagram.com/hartaithan" },
   {
     "id": 4,
-    "icon": "playmarket",
+    "icon": "googlePlay",
     "link": "//play.google.com/store/apps/dev?id=4716065440707220964"
   }
 ]
