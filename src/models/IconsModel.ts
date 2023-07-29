@@ -2,7 +2,7 @@ export type SocialIconType =
   | "googlePlay"
   | "github"
   | "mail"
-  | "instagram"
+  | "linkedIn"
   | "link";
 
 export interface IIconProps {

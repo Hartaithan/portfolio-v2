@@ -1,7 +1,11 @@
 [
   { "id": 1, "icon": "mail", "link": "mailto:hartaithan@gmail.com" },
   { "id": 2, "icon": "github", "link": "//github.com/Hartaithan" },
-  { "id": 3, "icon": "instagram", "link": "//www.instagram.com/hartaithan" },
+  {
+    "id": 3,
+    "icon": "linkedIn",
+    "link": "//www.linkedin.com/in/vladimir-stepanov-605b93222/"
+  },
   {
     "id": 4,
     "icon": "googlePlay",
