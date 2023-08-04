@@ -19,16 +19,18 @@ const Contact: FC = () => {
       animate="visible"
       exit="exit"
     >
-      {contacts.map((item) => {
-        const Icon = socialIcons[item.icon];
-        return (
-          <a key={item.id} href={item.link} target="_blank" rel="noreferrer">
-            <div className="contact__icon" id={item.icon}>
-              <Icon width={80} height={80} />
-            </div>
-          </a>
-        );
-      })}
+      <div className="contact__content">
+        {contacts.map((item) => {
+          const Icon = socialIcons[item.icon];
+          return (
+            <a key={item.id} href={item.link} target="_blank" rel="noreferrer">
+              <div className="contact__icon" id={item.icon}>
+                <Icon width={80} height={80} />
+              </div>
+            </a>
+          );
+        })}
+      </div>
     </motion.div>
   );
 };

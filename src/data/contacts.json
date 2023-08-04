@@ -8,6 +8,16 @@
   },
   {
     "id": 4,
+    "icon": "telegram",
+    "link": "//t.me/hartaithan"
+  },
+  {
+    "id": 5,
+    "icon": "hh",
+    "link": "//hh.ru/resume/c2d8f9a5ff0959ecb30039ed1f6f7933457473"
+  },
+  {
+    "id": 6,
     "icon": "googlePlay",
     "link": "//play.google.com/store/apps/dev?id=4716065440707220964"
   }

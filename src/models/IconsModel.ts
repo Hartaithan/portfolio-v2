@@ -3,7 +3,9 @@ export type SocialIconType =
   | "github"
   | "mail"
   | "linkedIn"
-  | "link";
+  | "link"
+  | "hh"
+  | "telegram";
 
 export interface IIconProps {
   width: number;
