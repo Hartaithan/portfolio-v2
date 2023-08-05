@@ -51,8 +51,11 @@
         border: 2px solid white;
         transform: scale(1.2);
       }
-      svg {
+      svg,
+      path {
         fill: black;
+      }
+      svg {
         transform: scale(1.1);
       }
     }
