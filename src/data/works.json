@@ -140,5 +140,30 @@
         "src": "https://trophy-list-fetcher.vercel.app/"
       }
     ]
+  },
+  {
+    "id": 8,
+    "name": "Dimension C-137",
+    "categ": "Web App | Angular",
+    "descr": "A project for practicing in Angular. Apollo Client (GraphQL) is used for data fetching. The application has two views - Table and Cards. Infinite Scroll is implemented in each view.",
+    "img": "./img/works/dimension-c137.png",
+    "tags": [
+      "ANGULAR",
+      "TYPESCRIPT",
+      "APOLLO CLIENT",
+      "INFINITE SCROLL",
+      "NGRX",
+      "MATERIAL TABLE"
+    ],
+    "links": [
+      {
+        "icon": "github",
+        "src": "https://github.com/Hartaithan/dimension-c137"
+      },
+      {
+        "icon": "link",
+        "src": "https://dimension-c137.vercel.app/"
+      }
+    ]
   }
 ]
