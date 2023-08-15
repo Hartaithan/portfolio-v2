@@ -184,6 +184,41 @@ const Figure: FC<IFigureProps> = (props) => {
         scale: 1.1,
         rotation: 0.01,
       },
+      {
+        id: 21,
+        name: "ʘ",
+        geometry: new TextGeometry("ʘ", options).center(),
+        scale: 1.1,
+        rotation: 0.01,
+      },
+      {
+        id: 22,
+        name: "Ξ",
+        geometry: new TextGeometry("Ξ", options).center(),
+        scale: 1.1,
+        rotation: 0.01,
+      },
+      {
+        id: 23,
+        name: "҉",
+        geometry: new TextGeometry("҉", options).center(),
+        scale: 1.1,
+        rotation: 0.01,
+      },
+      {
+        id: 24,
+        name: "҈",
+        geometry: new TextGeometry("҈", options).center(),
+        scale: 1.1,
+        rotation: 0.01,
+      },
+      {
+        id: 25,
+        name: "◌",
+        geometry: new TextGeometry("◌", options).center(),
+        scale: 2,
+        rotation: 0.01,
+      },
     ],
     [options]
   );
@@ -191,8 +226,8 @@ const Figure: FC<IFigureProps> = (props) => {
   let scale = 1;
   let rotation = 0.01;
 
-  const index = getRandNum(figures.length);
-  const randomFigure = figures.find((x) => x.id === index);
+  const index = getRandNum(figures.length + 1);
+  const randomFigure = figures[index];
   if (randomFigure) {
     geometry = randomFigure.geometry;
     scale = randomFigure.scale;
