@@ -2,7 +2,7 @@
   {
     "id": "aboutme",
     "title": "About Me",
-    "content": "I am a frontend developer with a passion for continuous development and improving my skills to create quality and user-friendly products.\n\nWith over three years of experience with frontend frameworks (mostly React, but also experience with Vue and Angular), I've gained the skills to create quality and responsive user interfaces. I have worked on a variety of projects including corporate websites, admin panels and mobile apps.\n\nAt the moment my preferred technology is React / Vue.",
+    "content": "I am a frontend developer with a passion for continuous development and improving my skills to create quality and user-friendly products.\n\nWith over three years of experience with frontend frameworks (mostly React, but also experience with Vue and Angular), I've gained the skills to create quality and responsive user interfaces. I have worked on a variety of projects including corporate websites, admin panels and mobile apps.",
     "containsTags": false,
     "tags": []
   },
@@ -12,18 +12,38 @@
     "content": "Frontend Skills",
     "containsTags": true,
     "tags": [
-      "HTML/CSS/SCSS",
-      "RESP. DESIGN",
+      "HTML",
+      "CSS",
+      "SCSS",
       "JS ES6+",
       "TS 4+",
+      "RESP. DESIGN",
       "REACT",
+      "NEXT.JS",
       "REDUX",
       "MOBX",
-      "NEXT.JS",
-      "SSR",
       "VUE",
+      "NUXT.JS",
       "VUEX",
-      "APOLLO CLIENT"
+      "ANGULAR",
+      "RX.JS",
+      "NGRX",
+      "BOOTSTRAP",
+      "MANTINE",
+      "STYLED COMPONENTS",
+      "REACT HOOK FORM",
+      "FORMIK",
+      "APOLLO CLIENT",
+      "CANVAS API",
+      "INTERSECTION OBSERVER API",
+      "THREE JS",
+      "REACT THREE FIBER",
+      "PAGINATION",
+      "INFINITE SCROLL",
+      "NOTIFICATIONS API",
+      "SERVICE WORKERS",
+      "JEST",
+      "REACT TESTING LIBRARY"
     ]
   },
   {
@@ -33,9 +53,11 @@
     "containsTags": true,
     "tags": [
       "NODE.JS",
-      "MONGO DB",
       "EXPRESS.JS",
-      "REST",
+      "MONGO DB",
+      "POSTGRESQL",
+      "JWT",
+      "COOKIES",
       "AUTHENTICATION",
       "WEBSOCKETS"
     ]

@@ -5,14 +5,11 @@
   width: 60%;
   height: 100%;
   margin: auto;
-  display: grid;
   align-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 200px fit-content;
-  gap: 30px 30px;
-  grid-template-areas:
-    "ABOUT ABOUT ABOUT"
-    "EL1 EL2 EL3";
+  gap: 15px 15px;
   &__element {
     display: flex;
     flex-direction: column;
@@ -55,7 +52,7 @@
           border-radius: 10px;
           border: 2px solid white;
           padding: 5px 10px;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 500;
           -webkit-transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
@@ -71,7 +68,7 @@
     }
   }
   #aboutme {
-    grid-area: ABOUT;
+    grid-area: 1 / 1 / 2 / 6;
     .about__element__title {
       justify-content: flex-start;
     }
@@ -80,13 +77,19 @@
     }
   }
   #frontend {
-    grid-area: EL1;
+    grid-area: 2 / 1 / 4 / 4;
+    li {
+      font-size: 16px;
+      margin: 5px;
+    }
   }
   #backend {
-    grid-area: EL2;
+    padding: 15px 10px;
+    grid-area: 2 / 4 / 3 / 6;
   }
-  #other {
-    grid-area: EL3;
+  #mobile {
+    padding: 15px 10px;
+    grid-area: 3 / 4 / 4 / 6;
   }
 }
 
@@ -101,6 +104,11 @@
         p {
           font-size: 0.75rem;
         }
+      }
+    }
+    #frontend {
+      li {
+        font-size: 14px;
       }
     }
   }
@@ -147,11 +155,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: fit-content fit-content fit-content fit-content;
     gap: 20px 0;
-    grid-template-areas:
-      "ABOUT"
-      "EL1"
-      "EL2"
-      "EL3";
     &__element {
       &__title {
         font-size: 16px;
@@ -159,10 +162,24 @@
       &__content {
         ul {
           li {
+            border-width: 1px;
             font-size: 10px;
+            margin: 3px;
           }
         }
       }
+    }
+    #frontend {
+      li {
+        font-size: 10px;
+        margin: 3px;
+      }
+    }
+    #aboutme,
+    #frontend,
+    #backend,
+    #mobile {
+      grid-area: unset;
     }
   }
 }
@@ -170,16 +187,19 @@
 @media (max-width: 992px) and (orientation: landscape) {
   .about {
     max-height: 70%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: fit-content 150px;
     gap: 10px 10px;
-    grid-template-areas:
-      "ABOUT ABOUT ABOUT"
-      "EL1 EL2 EL3";
   }
 }
 
 @media (max-width: 768px) {
+  .about {
+    #aboutme,
+    #frontend,
+    #backend,
+    #mobile {
+      padding: 12px;
+    }
+  }
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -232,6 +252,11 @@
         padding: 10px;
       }
     }
+    #frontend {
+      li {
+        font-size: 8px;
+      }
+    }
     #aboutme {
       .about__element__title {
         justify-content: center;
@@ -240,12 +265,19 @@
         justify-content: center;
       }
     }
+    #aboutme,
+    #frontend,
+    #backend,
+    #mobile {
+      padding: 10px;
+    }
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .about {
     overflow: auto;
-    max-height: 80%;
+    max-height: 85%;
+    align-content: unset;
   }
 }

@@ -13,7 +13,6 @@ import Modal from "../../components/Modal/Modal";
 const Home: FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  console.log("isMobile", isMobile);
   useTitle("Home");
 
   const handleResume = () => {
