@@ -165,5 +165,47 @@
         "src": "https://dimension-c137.vercel.app/"
       }
     ]
+  },
+  {
+    "id": 9,
+    "name": "Ramutable",
+    "categ": "Web App | Nuxt",
+    "descr": "A project for practicing in Nuxt. The application uses an SSR approach to render pages. Pagination is controlled by query params. UI built with Tailwind",
+    "img": "./img/works/ramutable.png",
+    "tags": ["VUE", "NUXT", "TYPESCRIPT", "TAILWIND", "SSR"],
+    "links": [
+      {
+        "icon": "github",
+        "src": "https://github.com/Hartaithan/ramutable"
+      },
+      {
+        "icon": "link",
+        "src": "https://ramutable.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Breeween",
+    "categ": "Web App | Angular",
+    "descr": "A project for practicing in Angular. Web audio player. User can add recordings to Firebase Database. Audio player has the ability to rewind, change volume and pause/resume. Audio player control logic is placed in a dedicated service.",
+    "img": "./img/works/breeween.png",
+    "tags": [
+      "ANGULAR",
+      "FIREBASE",
+      "TYPESCRIPT",
+      "AUDIO PLAYER",
+      "MATERIAL TABLE"
+    ],
+    "links": [
+      {
+        "icon": "github",
+        "src": "https://github.com/Hartaithan/breeween"
+      },
+      {
+        "icon": "link",
+        "src": "https://breeween.vercel.app/"
+      }
+    ]
   }
 ]
