@@ -129,15 +129,13 @@
     z-index: 3;
     display: flex;
     justify-content: center;
+    gap: 10px;
     &__item {
       height: 15px;
       width: 15px;
       background: $c-grey;
       border-radius: 50%;
       cursor: pointer;
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
     }
   }
 }
@@ -218,12 +216,10 @@
     }
     &__pages {
       bottom: 25px;
+      gap: 6px;
       &__item {
-        height: 10px;
-        width: 10px;
-        &:not(:last-child) {
-          margin-right: 2vw;
-        }
+        height: 8px;
+        width: 8px;
       }
     }
   }
@@ -288,9 +284,6 @@
       &__item {
         height: 8px;
         width: 8px;
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
       }
     }
   }
