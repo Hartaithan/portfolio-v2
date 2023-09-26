@@ -2,15 +2,13 @@
   {
     "id": "aboutme",
     "title": "About Me",
-    "content": "I am a frontend developer with a passion for continuous development and improving my skills to create quality and user-friendly products.\n\nWith over three years of experience with frontend frameworks (mostly React, but also experience with Vue and Angular), I've gained the skills to create quality and responsive user interfaces. I have worked on a variety of projects including corporate websites, admin panels and mobile apps.",
-    "containsTags": false,
+    "content": "I am a frontend developer with a passion for continuous development and improving my skills to create quality and user-friendly products.\n\nWith over three years of experience with frontend frameworks (mostly React, but also experience with React Native, Vue and Angular), I've gained the skills to create quality and responsive user interfaces. I have worked on a variety of projects including corporate websites, admin panels and mobile apps.",
     "tags": []
   },
   {
     "id": "frontend",
     "title": "Frontend Skills",
     "content": "Frontend Skills",
-    "containsTags": true,
     "tags": [
       "HTML",
       "CSS",
@@ -50,7 +48,6 @@
     "id": "backend",
     "title": "Backend Skills",
     "content": "Backend Skills",
-    "containsTags": true,
     "tags": [
       "NODE.JS",
       "EXPRESS.JS",
@@ -66,7 +63,6 @@
     "id": "mobile",
     "title": "Mobile Skills",
     "content": "Mobile Skills",
-    "containsTags": true,
     "tags": [
       "ANDROID",
       "ANDROID SDK",

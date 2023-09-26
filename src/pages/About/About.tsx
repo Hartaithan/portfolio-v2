@@ -19,7 +19,7 @@ const About: FC = () => {
       exit="exit"
     >
       {about.map((item) => {
-        if (!item.containsTags) {
+        if (item.tags.length === 0) {
           return (
             <div className="about__element" id={item.id} key={item.id}>
               <div className="about__element__title">
