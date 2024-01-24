@@ -11,9 +11,9 @@ const links = [
   },
   {
     id: 2,
-    selector: "works",
-    name: "Works",
-    pathname: "/works",
+    selector: "projects",
+    name: "Projects",
+    pathname: "/projects",
   },
   {
     id: 3,

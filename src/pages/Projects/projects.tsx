@@ -1,16 +1,16 @@
 import { FC } from "react";
-import "./works.scss";
+import "./projects.scss";
 import { motion } from "framer-motion";
 import { containerAnimation } from "../../animations";
 import Carousel from "../../components/Carousel/Carousel";
 import useTitle from "../../hooks/useTitle";
 
-const Works: FC = () => {
-  useTitle("Works");
+const Projects: FC = () => {
+  useTitle("Projects");
 
   return (
     <motion.div
-      className="works"
+      className="projects"
       variants={containerAnimation}
       initial="hidden"
       animate="visible"
@@ -21,4 +21,4 @@ const Works: FC = () => {
   );
 };
 
-export default Works;
+export default Projects;

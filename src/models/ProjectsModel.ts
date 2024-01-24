@@ -1,16 +1,16 @@
 import { SocialIconType } from "./IconsModel";
 
-export interface IWorkLink {
+export interface IProjectLink {
   icon: SocialIconType;
   src: string;
 }
 
-export interface IWorkItem {
+export interface IProjectItem {
   id: number;
   name: string;
   categ: string;
   descr: string;
   img: string;
   tags: string[];
-  links: IWorkLink[];
+  links: IProjectLink[];
 }

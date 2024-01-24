@@ -69,9 +69,9 @@ const Home: FC = () => {
           animate="animate"
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <Link to={"/works"}>
-            <button className="home__buttons__button" id="works">
-              My Works
+          <Link to={"/projects"}>
+            <button className="home__buttons__button" id="projects">
+              My Projects
             </button>
           </Link>
         </motion.div>

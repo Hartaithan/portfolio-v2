@@ -8,7 +8,7 @@ import ThreeJS from "./components/ThreeJS/ThreeJS";
 import AboutPage from "./pages/About/About";
 import ContactPage from "./pages/Contact/Contact";
 import HomePage from "./pages/Home/Home";
-import WorksPage from "./pages/Works/Works";
+import ProjectsPage from "./pages/Projects/projects";
 
 const App: FC = () => {
   return (
@@ -18,7 +18,7 @@ const App: FC = () => {
         <Routes key="routes">
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/works" element={<WorksPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </AnimatePresence>
