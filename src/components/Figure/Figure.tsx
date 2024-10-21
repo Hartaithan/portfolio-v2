@@ -18,7 +18,7 @@ const getRandNum = (max: number) => {
 const Figure: FC<IFigureProps> = (props) => {
   const { sizes, cursor } = props;
   const camera = useRef<PerspectiveCamera | null>(null);
-  const font = useLoader(FontLoader, "/fonts/arial.json");
+  const font = useLoader(FontLoader, "/portfolio-v2/fonts/arial.json");
   const mesh = useRef<THREE.Mesh | null>(null);
   const material = new THREE.MeshStandardMaterial({
     color: "white",

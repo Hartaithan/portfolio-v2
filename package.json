@@ -2,7 +2,7 @@
   "name": "hartaithan",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hartaithan.github.io",
+  "homepage": "http://hartaithan.github.io/portfolio-v2",
   "dependencies": {
     "@react-three/fiber": "^8.0.12",
     "@testing-library/jest-dom": "^5.11.10",
