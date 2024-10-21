@@ -11,7 +11,7 @@ export interface IModalProps {
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "./portfolio-v2/data/resume-frontend-stepanov-vladimir.pdf";
+  link.href = "./data/resume-frontend-stepanov-vladimir.pdf";
   link.setAttribute("download", `resume-frontend-stepanov-vladimir.pdf`);
   document.body.appendChild(link);
   link.click();
@@ -37,7 +37,7 @@ const Modal: FC<IModalProps> = (props) => {
         <iframe
           className="modal__resume"
           title="resume"
-          src={`./portfolio-v2/data/resume-frontend-stepanov-vladimir.pdf#toolbar=0&navpanes=0&scrollbar=0&scrolling=0&view=fitH`}
+          src={`./data/resume-frontend-stepanov-vladimir.pdf#toolbar=0&navpanes=0&scrollbar=0&scrolling=0&view=fitH`}
           frameBorder="0"
           scrolling="no"
         />

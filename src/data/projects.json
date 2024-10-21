@@ -4,7 +4,7 @@
     "name": "A-Z",
     "categ": "Mobile Game | Android",
     "descr": "The first serious project. A small text puzzle game based on the alphabet. Written on Kotlin. The Volley library was used to make HTTP requests to the web leaderboard.",
-    "img": "./portfolio-v2/img/projects/a-z.png",
+    "img": "./img/projects/a-z.png",
     "tags": ["ANDROID", "KOTLIN", "VOLLEY"],
     "links": [
       {
@@ -22,7 +22,7 @@
     "name": "Camo Tracker",
     "categ": "Web App | React | Express",
     "descr": "Camo Tracker for Call of Duty Black Ops Cold War. Built with MERN stack. Authentication is made using JWT tokens. User progress is managed by Redux and stored in MongoDB. Design is adapted for desktop and mobile devices. Hosted on Vercel",
-    "img": "./portfolio-v2/img/projects/camo-tracker.png",
+    "img": "./img/projects/camo-tracker.png",
     "tags": [
       "NODE.JS",
       "EXPRESS.JS",
@@ -48,7 +48,7 @@
     "name": "Rick and Morty Characters Wiki",
     "categ": "Web App | React",
     "descr": "A test project for typescript practice. The user can view information about a character, search by character name, type, species, and filter by status and gender. Hosted on Vercel",
-    "img": "./portfolio-v2/img/projects/rickandmorty.png",
+    "img": "./img/projects/rickandmorty.png",
     "tags": ["REACT", "AXIOS", "TYPESCRIPT", "BOOTSTRAP", "VERCEL", "MOBX"],
     "links": [
       {
@@ -66,7 +66,7 @@
     "name": "Image Editor",
     "categ": "Web App | Vue",
     "descr": "The web analog of the Snipping Tool app. The user can upload an image, mark some important detail on the image and save the edited image. Import and export works both from a file and from the clipboard.",
-    "img": "./portfolio-v2/img/projects/image-editor.png",
+    "img": "./img/projects/image-editor.png",
     "tags": ["VUE", "VUEX", "TYPESCRIPT", "HTML5 CANVAS", "VERCEL"],
     "links": [
       {
@@ -84,7 +84,7 @@
     "name": "Next Posts",
     "categ": "Web App | Next.JS",
     "descr": "A simple news website. Authorized users can create posts, rate them and leave comments. Authorization is done with Magic Link. The posts are stored in Supabase. The UI is built on Mantine.",
-    "img": "./portfolio-v2/img/projects/next-posts.png",
+    "img": "./img/projects/next-posts.png",
     "tags": [
       "NEXT.JS",
       "SSR",
@@ -110,7 +110,7 @@
     "name": "Image Aware Background",
     "categ": "Web App | Vue",
     "descr": "An application that identifies one dominant and 5 most used colors from a given image. The search for colors is implemented using the Canvas API.",
-    "img": "./portfolio-v2/img/projects/image-aware-background.png",
+    "img": "./img/projects/image-aware-background.png",
     "tags": ["VUE", "VITE", "TYPESCRIPT", "HTML5 CANVAS", "VERCEL"],
     "links": [
       {
@@ -128,7 +128,7 @@
     "name": "Trophy List Fetcher",
     "categ": "Web App | Next.JS",
     "descr": "Trophy List Fetching Tool. The application is able to fetch trophy lists from psnprofiles by parsing and directly from PSN API by authorization. The application was created to automate the import of trophy lists.",
-    "img": "./portfolio-v2/img/projects/trophy-list-fetcher.png",
+    "img": "./img/projects/trophy-list-fetcher.png",
     "tags": ["NEXT.JS", "SSR", "TYPESCRIPT", "PSN", "COOKIES", "CHEERIO"],
     "links": [
       {
@@ -146,7 +146,7 @@
     "name": "Dimension C-137",
     "categ": "Web App | Angular",
     "descr": "A project for practicing in Angular. Apollo Client (GraphQL) is used for data fetching. The application has two views - Table and Cards. Infinite Scroll is implemented in each view.",
-    "img": "./portfolio-v2/img/projects/dimension-c137.png",
+    "img": "./img/projects/dimension-c137.png",
     "tags": [
       "ANGULAR",
       "TYPESCRIPT",
@@ -171,7 +171,7 @@
     "name": "Ramutable",
     "categ": "Web App | Nuxt",
     "descr": "A project for practicing in Nuxt. The application uses an SSR approach to render pages. Pagination is controlled by query params. UI built with Tailwind",
-    "img": "./portfolio-v2/img/projects/ramutable.png",
+    "img": "./img/projects/ramutable.png",
     "tags": ["VUE", "NUXT", "TYPESCRIPT", "TAILWIND", "SSR"],
     "links": [
       {
@@ -189,7 +189,7 @@
     "name": "Breeween",
     "categ": "Web App | Angular",
     "descr": "A project for practicing in Angular. Web audio player. User can add recordings to Firebase Database. Audio player has the ability to rewind, change volume and pause/resume. Audio player control logic is placed in a dedicated service.",
-    "img": "./portfolio-v2/img/projects/breeween.png",
+    "img": "./img/projects/breeween.png",
     "tags": [
       "ANGULAR",
       "FIREBASE",

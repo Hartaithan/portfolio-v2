@@ -18,7 +18,7 @@ const Home: FC = () => {
   const handleResume = () => {
     if (isMobile) {
       const link = document.createElement("a");
-      link.href = "./portfolio-v2/data/resume-frontend-stepanov-vladimir.pdf";
+      link.href = "./data/resume-frontend-stepanov-vladimir.pdf";
       document.body.appendChild(link);
       link.click();
       link.parentNode?.removeChild(link);
